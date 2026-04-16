@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 
 const SocialIcons = () => {
-  const resumeUrl = `${import.meta.env.BASE_URL}arif_ashraf_resume.pdf`;
+  const resumeUrl = `${import.meta.env.BASE_URL}arif_ashraf_resume.pdf?v=20260416-1`;
 
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;

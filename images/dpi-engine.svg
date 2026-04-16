@@ -1,0 +1,71 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DPI engine network analysis dashboard">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071226"/>
+      <stop offset="100%" stop-color="#0d1d3a"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#172a4d" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#112342" stop-opacity="0.95"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4ac7ff"/>
+      <stop offset="100%" stop-color="#4dffb5"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="720" fill="url(#bg)"/>
+  <circle cx="1050" cy="90" r="220" fill="#00c8ff" opacity="0.08"/>
+  <circle cx="140" cy="640" r="260" fill="#00ff9c" opacity="0.07"/>
+
+  <rect x="50" y="40" width="1100" height="640" rx="24" fill="#0a1730" stroke="#2f4f7a" stroke-opacity="0.5"/>
+  <text x="90" y="95" fill="#e7f1ff" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">DPI Engine Monitor</text>
+  <text x="90" y="125" fill="#96b2d8" font-family="Segoe UI, Arial, sans-serif" font-size="16">Flow Inspection • Protocol Parsing • Rule-Based Blocking</text>
+
+  <rect x="85" y="160" width="710" height="245" rx="16" fill="url(#panel)" stroke="#335b86"/>
+  <text x="110" y="196" fill="#dceaff" font-family="Consolas, monospace" font-size="18">Live Throughput</text>
+  <polyline points="110,350 180,332 250,340 320,300 390,314 460,270 530,280 600,248 670,265 740,226" fill="none" stroke="url(#line)" stroke-width="5" filter="url(#glow)"/>
+  <line x1="110" y1="350" x2="760" y2="350" stroke="#36577e" stroke-width="2"/>
+  <line x1="110" y1="240" x2="760" y2="240" stroke="#28486c" stroke-width="1" stroke-dasharray="6 8"/>
+  <line x1="110" y1="295" x2="760" y2="295" stroke="#28486c" stroke-width="1" stroke-dasharray="6 8"/>
+
+  <rect x="820" y="160" width="295" height="245" rx="16" fill="url(#panel)" stroke="#335b86"/>
+  <text x="845" y="196" fill="#dceaff" font-family="Consolas, monospace" font-size="18">Protocol Split</text>
+  <rect x="845" y="225" width="230" height="18" rx="9" fill="#27476f"/>
+  <rect x="845" y="225" width="154" height="18" rx="9" fill="#31b4ff"/>
+  <text x="845" y="218" fill="#9ec3ea" font-family="Segoe UI, Arial, sans-serif" font-size="14">TCP 67%</text>
+
+  <rect x="845" y="268" width="230" height="18" rx="9" fill="#27476f"/>
+  <rect x="845" y="268" width="47" height="18" rx="9" fill="#32e0a1"/>
+  <text x="845" y="261" fill="#9ec3ea" font-family="Segoe UI, Arial, sans-serif" font-size="14">UDP 21%</text>
+
+  <rect x="845" y="311" width="230" height="18" rx="9" fill="#27476f"/>
+  <rect x="845" y="311" width="21" height="18" rx="9" fill="#ffd166"/>
+  <text x="845" y="304" fill="#9ec3ea" font-family="Segoe UI, Arial, sans-serif" font-size="14">TLS 9%</text>
+
+  <rect x="845" y="354" width="230" height="18" rx="9" fill="#27476f"/>
+  <rect x="845" y="354" width="8" height="18" rx="9" fill="#ff6b6b"/>
+  <text x="845" y="347" fill="#9ec3ea" font-family="Segoe UI, Arial, sans-serif" font-size="14">Other 3%</text>
+
+  <rect x="85" y="430" width="1030" height="220" rx="16" fill="url(#panel)" stroke="#335b86"/>
+  <text x="110" y="466" fill="#dceaff" font-family="Consolas, monospace" font-size="18">Alert Feed</text>
+
+  <rect x="110" y="488" width="980" height="42" rx="10" fill="#183156"/>
+  <circle cx="133" cy="509" r="6" fill="#ff5d6e"/>
+  <text x="150" y="515" fill="#cfe1ff" font-family="Consolas, monospace" font-size="15">Blocked domain rule hit: suspicious-domain.example</text>
+
+  <rect x="110" y="539" width="980" height="42" rx="10" fill="#183156"/>
+  <circle cx="133" cy="560" r="6" fill="#ffd166"/>
+  <text x="150" y="566" fill="#cfe1ff" font-family="Consolas, monospace" font-size="15">TLS SNI extracted: api.github.com (ClientHello)</text>
+
+  <rect x="110" y="590" width="980" height="42" rx="10" fill="#183156"/>
+  <circle cx="133" cy="611" r="6" fill="#32e0a1"/>
+  <text x="150" y="617" fill="#cfe1ff" font-family="Consolas, monospace" font-size="15">Flow pipeline healthy: 4 workers, queue depth stable</text>
+</svg>

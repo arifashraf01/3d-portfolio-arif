@@ -1,0 +1,131 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper,margin=0.5in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[itemize]{leftmargin=1.1em, label=--, topsep=1pt, itemsep=1pt, parsep=0pt}
+
+\titleformat{\section}{\bfseries\large}{}{0em}{}
+\titlespacing*{\section}{0pt}{5pt}{2pt}
+
+\newcommand{\sectionline}{\vspace{-4pt}\hrule\vspace{4pt}}
+\newcommand{\blockspace}{\vspace{2pt}}
+\newcommand{\projectlink}[2]{\href{#1}{\textcolor{blue}{\textit{#2}}}}
+\newcommand{\projecttitle}[1]{{\fontsize{12}{13}\selectfont\textbf{#1}}}
+\newcommand{\projectdescspace}{\vspace{0pt}}
+\newcommand{\projectstack}[1]{{\footnotesize\itshape #1}}
+
+\begin{document}
+
+\begin{center}
+	{\LARGE \textbf{Arif Ashraf}} \\
+	\small
+	Bengaluru, Karnataka
+	\; --- \; \href{mailto:arif18052@gmail.com}{Mail}
+	\; --- \; +91 9797012112
+	\; --- \; \href{https://www.linkedin.com/in/arif-ashraf-3abb89179}{LinkedIn}
+	\; --- \; \href{https://github.com/arifashraf01}{GitHub}
+	\; --- \; \href{https://arifashraf01.github.io/3d-portfolio-arif/}{Portfolio}
+\end{center}
+
+\section*{Summary}
+\sectionline
+Final-year Computer Science student with strong foundations in Java, data structures, and backend development.
+Experienced in building scalable applications using Django, Spring Boot, and MySQL.
+Seeking an SDE role to build high-impact systems.
+
+\blockspace
+
+\section*{Education}
+\sectionline
+\textbf{SEA College of Engineering and Technology (SEACET), Bengaluru}
+\hfill 2022 -- Present \\
+BE in Computer Science and Engineering
+\hfill CGPA: 8.5/10
+
+\blockspace
+
+\section*{Skills}
+\sectionline
+\textbf{Languages:} Java, Python, C++ \\
+\textbf{Frameworks \& Backend:} Django, Spring Boot, REST APIs, WebSocket APIs \\
+\textbf{Databases:} MySQL, MongoDB \\
+\textbf{Web Technologies:} HTML, CSS, JavaScript \\
+\textbf{Tools \& Platforms:} Git, GitHub, Jira
+
+\blockspace
+
+\section*{Experience}
+\sectionline
+\textbf{Netpy Technologies} --- Software Developer Intern
+\hfill Oct 2025 -- Present
+\begin{itemize}
+	\item Developed and maintained backend services in Django for a cloud-based e-commerce platform used across core order workflows.
+	\item Built and documented 15+ REST APIs for authentication, catalog, and order processing modules.
+	\item Implemented OTP login and RBAC across 3 user roles (admin, operations, customer support).
+	\item Optimized critical inventory and transaction queries, reducing API response time by approximately 25\%.
+	\item Delivered features through PR-based Agile cycles, contributing to weekly release milestones.
+\end{itemize}
+
+\blockspace
+
+\section*{Projects}
+\sectionline
+\projecttitle{DPI Engine --- Deep Packet Inspection System} \hfill \projectlink{https://github.com/arifashraf01/Packet_analyzer}{GitHub} \\
+\projectstack{C++ --- Networking --- PCAP Parsing --- Multithreading --- TLS}
+\projectdescspace
+\normalsize
+\begin{itemize}
+	\item Built a Deep Packet Inspection engine to parse raw PCAP captures and perform flow-level traffic analysis.
+	\item Implemented custom parsers for 4 protocols: Ethernet, IPv4, TCP, and UDP.
+	\item Extracted TLS SNI from HTTPS Client Hello packets to enable domain-level traffic identification.
+	\item Developed a rule engine supporting 3 enforcement layers: IP, application, and domain blocking.
+	\item Designed a multithreaded processing pipeline with thread-safe queues.
+\end{itemize}
+
+\blockspace
+
+\projecttitle{Real-Time Chat Application} \hfill \projectlink{https://github.com/arifashraf01/ephemeral-chat-system}{GitHub} \\
+\projectstack{Java --- Spring Boot --- WebSocket --- REST APIs}
+\projectdescspace
+\normalsize
+\begin{itemize}
+	\item Developed and deployed a real-time chat backend using Spring Boot and WebSocket messaging.
+	\item Implemented bidirectional communication with sub-second message delivery in local testing.
+	\item Designed 10+ REST APIs for user management, chat rooms, and message persistence.
+	\item Built backend flows supporting 50+ concurrent user sessions during functional load tests.
+\end{itemize}
+
+\blockspace
+
+\projecttitle{Client Project --- Gill Organics} \hfill \projectlink{https://gillorganics.com}{Website} \\
+\projectstack{Django --- E-commerce Backend --- REST APIs}
+\projectdescspace
+\normalsize
+\begin{itemize}
+	\item Developed backend modules for product catalog, authentication, and order lifecycle workflows.
+	\item Built 12+ REST endpoints for product listing, category management, cart, and order placement.
+	\item Improved checkout and order-status workflows, reducing manual support dependency for order tracking.
+	\item Optimized inventory and transaction queries, improving consistency and response times under peak usage.
+	\item Supported integration, QA fixes, and release cycles to deliver production-ready features on schedule.
+	\item Added validation and error-handling logic to improve API reliability and reduce failed order operations.
+\end{itemize}
+
+\blockspace
+
+\section*{Achievements}
+\sectionline
+\begin{itemize}
+	\item 2nd Prize --- College Hackathon (Innovation Category)
+	\item Solved 100+ DSA problems in Java/C++ across arrays, strings, sets, linked lists and maps.
+	\item TCS TechBytes --- Reached the Semifinalist stage in a national-level technical competition focused on problem-solving and coding aptitude.
+	\item Selected for Inter-College Round of SAP Labs NEXTGRID Hackfest
+\end{itemize}
+
+\end{document}

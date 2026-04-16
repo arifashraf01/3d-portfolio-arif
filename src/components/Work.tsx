@@ -5,32 +5,18 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
+    title: "DPI Engine",
+    category: "Deep Packet Inspection System",
+    tools: "C++, Networking, PCAP Parsing, Multithreading, TLS",
+    image: "/images/dpi-engine.svg",
+    link: "https://github.com/arifashraf01/Packet_analyzer",
   },
   {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
-  },
-  {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
-  },
-  {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "Real-Time Chat Application",
+    category: "Spring Boot WebSocket Chat",
+    tools: "Java, Spring Boot, WebSocket, REST APIs",
+    image: "/images/chatapp.png",
+    link: "https://github.com/arifashraf01/ephemeral-chat-system",
   },
 ];
 

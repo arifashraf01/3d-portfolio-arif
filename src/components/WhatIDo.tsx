@@ -87,20 +87,21 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>AI & AUTOMATION</h3>
-              <h4>Workflow Intelligence for Organizations</h4>
+              <h3>BACKEND ENGINEERING</h3>
+              <h4>Scalable APIs and System Design</h4>
               <p>
-                AI specialist helping organizations automate workflows—internal ops
-                and customer-facing—so teams ship faster with less manual work.
+                I build reliable backend systems with Django and Spring Boot,
+                focusing on clean architecture, secure authentication, and
+                production-ready API design.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">LLMs &amp; agents</div>
-                <div className="what-tags">Workflow design</div>
-                <div className="what-tags">RAG &amp; retrieval</div>
-                <div className="what-tags">Evals &amp; guardrails</div>
-                <div className="what-tags">Integrations</div>
-                <div className="what-tags">Product strategy</div>
+                <div className="what-tags">Java</div>
+                <div className="what-tags">Python</div>
+                <div className="what-tags">Django</div>
+                <div className="what-tags">Spring Boot</div>
+                <div className="what-tags">REST APIs</div>
+                <div className="what-tags">WebSocket APIs</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -124,21 +125,21 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>BUILD &amp; SCALE</h3>
-              <h4>Shipping AI in Production</h4>
+              <h3>NETWORKING &amp; SYSTEMS</h3>
+              <h4>Traffic Analysis and Real-Time Apps</h4>
               <p>
-                I build the systems behind it: APIs, data, voice/real-time, and
-                full-stack products—production-ready, not slide decks.
+                I enjoy system-level development, from packet analysis pipelines
+                to real-time chat architecture using WebSocket communication.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Python</div>
-                <div className="what-tags">REST &amp; real-time APIs</div>
-                <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">C++</div>
+                <div className="what-tags">PCAP Parsing</div>
+                <div className="what-tags">TLS Analysis</div>
+                <div className="what-tags">Multithreading</div>
                 <div className="what-tags">MongoDB</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Cloud &amp; infra</div>
+                <div className="what-tags">MySQL</div>
+                <div className="what-tags">Git &amp; GitHub</div>
               </div>
               <div className="what-arrow"></div>
             </div>

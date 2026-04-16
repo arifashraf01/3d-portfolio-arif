@@ -3,19 +3,21 @@ import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const projects = [
   {
     title: "DPI Engine",
     category: "Deep Packet Inspection System",
     tools: "C++, Networking, PCAP Parsing, Multithreading, TLS",
-    image: "/images/dpi-engine.svg",
+    image: `${baseUrl}images/dpi-engine.svg`,
     link: "https://github.com/arifashraf01/Packet_analyzer",
   },
   {
     title: "Real-Time Chat Application",
     category: "Spring Boot WebSocket Chat",
     tools: "Java, Spring Boot, WebSocket, REST APIs",
-    image: "/images/chatapp.png",
+    image: `${baseUrl}images/chatapp.png`,
     link: "https://github.com/arifashraf01/ephemeral-chat-system",
   },
 ];

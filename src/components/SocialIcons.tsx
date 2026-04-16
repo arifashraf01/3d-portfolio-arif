@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 
 const SocialIcons = () => {
+  const resumeUrl = `${import.meta.env.BASE_URL}arif_ashraf_resume.pdf`;
+
   useEffect(() => {
     const social = document.getElementById("social") as HTMLElement;
 
@@ -78,7 +80,7 @@ const SocialIcons = () => {
       </div>
       <a
         className="resume-button"
-        href="/arif_ashraf_resume.pdf"
+        href={resumeUrl}
         target="_blank"
         rel="noreferrer"
       >

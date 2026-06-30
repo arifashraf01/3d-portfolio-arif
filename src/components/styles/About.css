@@ -40,3 +40,12 @@
     font-size: 32px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .about-me p {
+    font-size: 20px;
+  }
+  .about-me h3 {
+    font-size: 20px;
+  }
+}

@@ -181,3 +181,24 @@
     font-size: 32px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .landing-name {
+    font-size: 36px;
+  }
+  .landing-role {
+    font-size: 16px;
+  }
+  .landing-bio {
+    font-size: 14px;
+    margin: 5px 0 15px 0;
+  }
+  .landing-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

@@ -188,3 +188,19 @@
     font-size: 26px;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .work-item {
+    padding: 25px;
+  }
+  .work-section h2 {
+    font-size: 40px;
+  }
+  .work-details h4 {
+    font-size: 24px;
+  }
+  .work-github-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

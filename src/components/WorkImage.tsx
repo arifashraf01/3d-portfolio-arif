@@ -1,5 +1,5 @@
 import { memo, useState } from "react";
-import { MdArrowOutward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa6";
 
 interface Props {
   image: string;
@@ -33,7 +33,7 @@ const WorkImage = (props: Props) => {
       >
         {props.link && (
           <div className="work-link">
-            <MdArrowOutward />
+            <FaGithub />
           </div>
         )}
         <img src={props.image} alt={props.alt} loading="lazy" decoding="async" />

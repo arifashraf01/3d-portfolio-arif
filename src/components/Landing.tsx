@@ -1,33 +1,24 @@
-import { PropsWithChildren } from "react";
 import "./styles/Landing.css";
 
-const Landing = ({ children }: PropsWithChildren) => {
+const Landing = () => {
   return (
     <>
       <div className="landing-section" id="landingDiv">
         <div className="landing-container">
-          <div className="landing-intro">
-            <h2>Hello! I'm</h2>
-            <h1>
-              ARIF
-              <br />
-              <span>ASHRAF</span>
-            </h1>
-          </div>
-          <div className="landing-info">
-            <h3>Final-Year CSE Student &</h3>
-            <h2 className="landing-info-h2">
-              <div className="landing-h2-1">Backend</div>
-              <div className="landing-h2-2">Developer</div>
-            </h2>
-            <h2>
-              <div className="landing-h2-info">Django</div>
-              <div className="landing-h2-info-1">Spring Boot</div>
-            </h2>
+          <div className="landing-content">
+            <h2 className="landing-greeting">Hello! I'm</h2>
+            <h1 className="landing-name">ARIF ASHRAF</h1>
+            <h3 className="landing-role">
+              Final-Year CSE Student & <span className="highlight">Backend Developer</span>
+            </h3>
+            <p className="landing-tags">
+              Django &bull; Spring Boot &bull; System Design &bull; C++ &bull; Networking
+            </p>
           </div>
         </div>
-        {children}
       </div>
+      <div className="landing-circle1"></div>
+      <div className="landing-circle2"></div>
     </>
   );
 };

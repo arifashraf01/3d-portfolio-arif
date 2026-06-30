@@ -1,4 +1,4 @@
-import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
@@ -10,7 +10,7 @@ const Work = lazy(() => import("./Work"));
 const Contact = lazy(() => import("./Contact"));
 const TechStack = lazy(() => import("./TechStack"));
 
-const MainContainer = ({ children }: PropsWithChildren) => {
+const MainContainer = () => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
     window.innerWidth > 1024
   );
@@ -30,9 +30,8 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     <div className="container-main">
       <Navbar />
       <SocialIcons />
-      {isDesktopView && children}
       <div className="container-main">
-        <Landing>{!isDesktopView && children}</Landing>
+        <Landing />
         <Suspense fallback={null}>
           <About />
           <WhatIDo />

@@ -8,14 +8,7 @@ const Navbar = () => {
         <a href="/#" className="navbar-title">
           AA
         </a>
-        <a
-          href="https://www.linkedin.com/in/arif-ashraf-3abb89179"
-          className="navbar-connect"
-          target="_blank"
-          rel="noreferrer"
-        >
-          LinkedIn
-        </a>
+
         <ul>
           <li>
             <a href="#about">

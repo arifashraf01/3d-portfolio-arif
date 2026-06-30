@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { MdArrowOutward } from "react-icons/md";
 
 interface Props {
@@ -45,4 +45,4 @@ const WorkImage = (props: Props) => {
   );
 };
 
-export default WorkImage;
+export default memo(WorkImage);

@@ -9,7 +9,7 @@ const Landing = () => {
             <h2 className="landing-greeting">Hello! I'm</h2>
             <h1 className="landing-name">ARIF ASHRAF</h1>
             <h3 className="landing-role">
-              Final-Year CSE Student & <span className="highlight">Backend Developer</span>
+              Computer Science Graduate & <span className="highlight">Backend Developer</span>
             </h3>
             <p className="landing-tags">
               Django &bull; Spring Boot &bull; System Design &bull; C++ &bull; Networking

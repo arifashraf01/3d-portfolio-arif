@@ -6,7 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          I am a final-year Computer Science student focused on backend
+          I am a Computer Science graduate focused on backend
           engineering and scalable systems. I build practical products with
           Django, Spring Boot, REST APIs, and WebSocket APIs, with strong
           foundations in Java, data structures, and system design.

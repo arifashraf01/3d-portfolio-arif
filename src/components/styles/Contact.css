@@ -3,6 +3,8 @@
   position: relative;
   z-index: 2;
   background-color: var(--backgroundColor);
+  width: var(--cWidth);
+  margin: auto;
 }
 
 .contact-container {

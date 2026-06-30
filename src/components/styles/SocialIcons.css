@@ -22,7 +22,6 @@
 }
 .social-icons a:hover {
   color: var(--accentColor);
-  transform: scale(1.1);
 }
 .social-icons span {
   width: 50px;

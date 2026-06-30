@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import { RGBELoader } from "three-stdlib";
-import { gsap } from "gsap";
 
 const setLighting = (scene: THREE.Scene) => {
   const directionalLight = new THREE.DirectionalLight(0x5eead4, 0);
@@ -28,31 +27,23 @@ const setLighting = (scene: THREE.Scene) => {
     });
 
   function setPointLight(screenLight: any) {
-    if (screenLight.material.opacity > 0.9) {
+    if (screenLight && screenLight.material && screenLight.material.opacity > 0.9) {
       pointLight.intensity = screenLight.material.emissiveIntensity * 20;
     } else {
       pointLight.intensity = 0;
     }
   }
-  const duration = 2;
-  const ease = "power2.inOut";
+
   function turnOnLights() {
-    gsap.to(scene, {
-      environmentIntensity: 0.64,
-      duration: duration,
-      ease: ease,
-    });
-    gsap.to(directionalLight, {
-      intensity: 1,
-      duration: duration,
-      ease: ease,
-    });
-    gsap.to(".character-rim", {
-      y: "55%",
-      opacity: 1,
-      delay: 0.2,
-      duration: 2,
-    });
+    scene.environmentIntensity = 0.64;
+    directionalLight.intensity = 1;
+    
+    const rim = document.querySelector(".character-rim") as HTMLElement;
+    if (rim) {
+      rim.style.transition = "transform 2s, opacity 2s";
+      rim.style.transform = "translate(-50%, 55%) scaleX(1.4)";
+      rim.style.opacity = "1";
+    }
   }
 
   return { setPointLight, turnOnLights };

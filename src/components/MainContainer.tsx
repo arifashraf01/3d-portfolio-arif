@@ -1,13 +1,13 @@
 import { lazy, PropsWithChildren, Suspense, useEffect, useState } from "react";
-import About from "./About";
-import Career from "./Career";
-import Contact from "./Contact";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
-import WhatIDo from "./WhatIDo";
-import Work from "./Work";
 
+const About = lazy(() => import("./About"));
+const WhatIDo = lazy(() => import("./WhatIDo"));
+const Career = lazy(() => import("./Career"));
+const Work = lazy(() => import("./Work"));
+const Contact = lazy(() => import("./Contact"));
 const TechStack = lazy(() => import("./TechStack"));
 
 const MainContainer = ({ children }: PropsWithChildren) => {
@@ -33,16 +33,14 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       {isDesktopView && children}
       <div className="container-main">
         <Landing>{!isDesktopView && children}</Landing>
-        <About />
-        <WhatIDo />
-        <Career />
-        <Work />
-        {isDesktopView && (
-          <Suspense fallback={null}>
-            <TechStack />
-          </Suspense>
-        )}
-        <Contact />
+        <Suspense fallback={null}>
+          <About />
+          <WhatIDo />
+          <Career />
+          <Work />
+          {isDesktopView && <TechStack />}
+          <Contact />
+        </Suspense>
       </div>
     </div>
   );

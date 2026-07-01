@@ -3,7 +3,8 @@
   max-width: var(--cMaxWidth);
   margin: auto;
   position: relative;
-  height: var(--vh);
+  height: 100vh;
+  height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;

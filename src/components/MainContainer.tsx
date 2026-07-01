@@ -1,14 +1,14 @@
-import { lazy, Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
 
-const About = lazy(() => import("./About"));
-const WhatIDo = lazy(() => import("./WhatIDo"));
-const Career = lazy(() => import("./Career"));
-const Work = lazy(() => import("./Work"));
-const Contact = lazy(() => import("./Contact"));
-const TechStack = lazy(() => import("./TechStack"));
+import About from "./About";
+import WhatIDo from "./WhatIDo";
+import Career from "./Career";
+import Work from "./Work";
+import Contact from "./Contact";
+import TechStack from "./TechStack";
 
 const MainContainer = () => {
   const [isDesktopView, setIsDesktopView] = useState<boolean>(
@@ -32,14 +32,12 @@ const MainContainer = () => {
       <SocialIcons />
       <div className="container-main">
         <Landing />
-        <Suspense fallback={null}>
-          <About />
-          <WhatIDo />
-          <Career />
-          <Work />
-          {isDesktopView && <TechStack />}
-          <Contact />
-        </Suspense>
+        <About />
+        <WhatIDo />
+        <Career />
+        <Work />
+        {isDesktopView && <TechStack />}
+        <Contact />
       </div>
     </div>
   );

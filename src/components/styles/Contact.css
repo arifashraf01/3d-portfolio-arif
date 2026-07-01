@@ -154,12 +154,24 @@ a.contact-item:hover .contact-value {
 
 @media only screen and (max-width: 480px) {
   .contact-container h2 {
-    font-size: 36px;
+    font-size: 28px;
   }
   .contact-card {
-    padding: 20px;
+    padding: 15px;
+  }
+  .contact-card h4 {
+    font-size: 20px;
+  }
+  .contact-label {
+    font-size: 14px;
   }
   .contact-value {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .contact-footer h3 {
+    font-size: 18px;
+  }
+  .contact-footer p {
+    font-size: 14px;
   }
 }

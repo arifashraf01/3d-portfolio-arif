@@ -27,7 +27,7 @@ const projects = [
     title: "Django AI Assistant",
     category: "AI Integration & Backend",
     tools: "Python, Django, LLM API, REST Framework",
-    image: "", 
+    image: `${baseUrl}images/ai-assist.png`, 
     link: "https://github.com/arifashraf01/Django-AI-Assistant",
     description: "An intelligent backend service powered by Django and AI models to automate tasks, process natural language, and provide context-aware responses.",
     icon: <MdOutlineSmartToy />
@@ -36,8 +36,8 @@ const projects = [
     title: "Matrix Chat App",
     category: "Frontend UI/UX",
     tools: "React, TypeScript, Tailwind CSS",
-    image: "", 
-    link: "https://github.com/arifashraf01/Matrix-chat",
+    image: `${baseUrl}images/matrix-chat.png`, 
+    link: "https://github.com/arifashraf01/Matrix_chat_frontend",
     description: "A sleek, responsive frontend interface for a modern chat application, focusing on real-time UX, clean architecture, and fluid interactions.",
     icon: <MdChatBubbleOutline />
   },

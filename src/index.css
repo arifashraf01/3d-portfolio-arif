@@ -40,12 +40,18 @@ a:hover {
   color: var(--accentColor);
 }
 
-main {
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #050810;
+  min-height: 100vh;
 }
 
 body {
   margin: 0;
-  height: auto;
+  min-height: 100vh;
   background-color: #050810;
   flex-grow: 1;
   --cWidth: 100%;

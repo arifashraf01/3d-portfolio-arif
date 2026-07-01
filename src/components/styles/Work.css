@@ -123,6 +123,7 @@
   font-weight: 500;
   font-size: 15px;
   width: fit-content;
+  box-sizing: border-box;
   transition: all 0.3s ease;
 }
 

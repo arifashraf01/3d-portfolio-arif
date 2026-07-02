@@ -1,28 +1,23 @@
-# 3D Portfolio Website
+# Arif Ashraf — Portfolio Website
 
-This repository contains the source code for a personal 3D portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, a character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
+This repository contains the source code for my personal portfolio built with React, TypeScript, Three.js, React Three Fiber, and GSAP. It includes animated page sections, an interactive character scene, custom cursor interactions, and smooth transitions designed for a modern portfolio experience.
 
-Live site: Update this URL after deployment.
+Live site: [https://arifashraf01.github.io/3d-portfolio-arif/](https://arifashraf01.github.io/3d-portfolio-arif/)
 
 ![Portfolio Preview](public/images/preview1.png)
 
-## Table of Contents
+## About Me
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
-- [GSAP License Note](#gsap-license-note)
-- [Customization Guide](#customization-guide)
-- [Troubleshooting](#troubleshooting)
-- [Deployment](#deployment)
-- [License](#license)
+I am a Software Engineer focused on architecting scalable backends and high-performance REST APIs. Proficient in Java, Spring Boot, and Django, driving features through Agile cycles. Dedicated to optimizing complex systems and writing clean, reliable code.
 
-## Features
+- **Education:** BE in Computer Science and Engineering, SEA College of Engineering and Technology (2022-2026)
+- **Skills:** Java, Python, C++, Spring Boot, Django, PostgreSQL, MongoDB, React, AWS EC2
+- **Experience:** Software Developer Intern at Netpy Technologies
+
+## Portfolio Features
 
 - Responsive one-page portfolio layout with reusable section components.
-- 3D character scene rendering powered by React Three Fiber and Three.js.
+- Interactive character scene rendering powered by React Three Fiber and Three.js.
 - GSAP-powered animations and transitions for interactive storytelling.
 - Custom cursor, hover interactions, and scroll-driven visual effects.
 - Organized component architecture with dedicated utilities and style modules.
@@ -30,13 +25,11 @@ Live site: Update this URL after deployment.
 ## Tech Stack
 
 ### Core
-
 - React 18
 - TypeScript
 - Vite
 
-### Animation and 3D
-
+### Animation and Rendering
 - GSAP + `@gsap/react`
 - Three.js
 - `@react-three/fiber`
@@ -46,7 +39,6 @@ Live site: Update this URL after deployment.
 - `@react-three/rapier`
 
 ### Supporting Libraries
-
 - `react-icons`
 - `react-fast-marquee`
 - `@vercel/analytics`
@@ -59,7 +51,7 @@ Live site: Update this URL after deployment.
 ├── src/
 │   ├── assets/                # Local media/assets
 │   ├── components/
-│   │   ├── Character/         # 3D scene + character logic/utilities
+│   │   ├── Character/         # Scene + character logic/utilities
 │   │   ├── styles/            # Section/component CSS files
 │   │   ├── About.tsx
 │   │   ├── Career.tsx
@@ -81,27 +73,23 @@ Live site: Update this URL after deployment.
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js 18+ (recommended)
 - npm 9+ (or compatible)
 
 ### Installation
 
 1. Clone the repository:
-
    ```bash
-   git clone <your-repository-url>
-   cd 3d-portfolio
+   git clone https://github.com/arifashraf01/3d-portfolio-arif.git
+   cd portfolio
    ```
 
 2. Install dependencies:
-
    ```bash
    npm install
    ```
 
 3. Start the local development server:
-
    ```bash
    npm run dev
    ```
@@ -110,66 +98,17 @@ Live site: Update this URL after deployment.
 
 ## Available Scripts
 
-- `npm run dev`  
-  Starts Vite dev server and exposes host for local network testing.
-
-- `npm run build`  
-  Type-checks and builds a production-ready bundle.
-
-- `npm run preview`  
-  Serves the production build locally for verification.
-
-- `npm run lint`  
-  Runs ESLint checks across the project.
-
-## GSAP License Note
-
-This project uses the standard `gsap` package, including bonus plugins now available in the core package.
-
-- Install dependencies with `npm install`.
-- If migrating from older setups, remove `gsap-trial` from your project.
-
-Read official installation guidance here: [GSAP Installation Docs](https://gsap.com/docs/v3/Installation/)
-
-## Customization Guide
-
-You can adapt this portfolio to your own profile by updating the following areas:
-
-- **Content sections**: Edit files in `src/components/` such as `About.tsx`, `Career.tsx`, `WhatIDo.tsx`, and `Work.tsx`.
-- **Data source**: Update static values in files under `src/data/`.
-- **Styling**: Modify component styles in `src/components/styles/` and global styles in `src/index.css` / `src/App.css`.
-- **3D scene behavior**: Adjust scene logic in `src/components/Character/` and related utilities.
-- **Animations**: Tweak GSAP utilities under `src/components/utils/`.
+- `npm run dev`: Starts Vite dev server.
+- `npm run build`: Type-checks and builds a production-ready bundle.
+- `npm run preview`: Serves the production build locally.
+- `npm run lint`: Runs ESLint checks across the project.
 
 ## Troubleshooting
 
-- **Blank screen in development**  
-  Check browser console for module import errors and verify all dependencies are installed.
-
-- **3D performance issues on low-end devices**  
-  Reduce scene complexity and post-processing effects in the character/scene utilities.
-
-- **GSAP plugin errors**  
-  Ensure you have the correct plugin package and license configuration for your target environment.
-
-- **TypeScript build failures**  
-  Run `npm run build` and address reported type errors before deploying.
-
-## Deployment
-
-1. Create a production build:
-
-   ```bash
-   npm run build
-   ```
-
-2. Validate locally:
-
-   ```bash
-   npm run preview
-   ```
-
-3. Deploy the generated `dist/` folder to your hosting provider (for example Vercel, Netlify, or Cloudflare Pages).
+- **Blank screen in development:** Check browser console for module import errors and verify all dependencies are installed.
+- **Performance issues on low-end devices:** Reduce scene complexity and post-processing effects in the character/scene utilities.
+- **GSAP plugin errors:** Ensure you have the correct plugin package and license configuration for your target environment.
+- **TypeScript build failures:** Run `npm run build` and address reported type errors before deploying.
 
 ## License
 

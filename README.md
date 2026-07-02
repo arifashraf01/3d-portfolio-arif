@@ -4,7 +4,7 @@ This repository contains the source code for my personal portfolio built with Re
 
 Live site: [https://arifashraf01.github.io/3d-portfolio-arif/](https://arifashraf01.github.io/3d-portfolio-arif/)
 
-![Portfolio Preview](public/images/preview1.png)
+![Portfolio Preview](project_pics/landing%20page.png)
 
 ## About Me
 

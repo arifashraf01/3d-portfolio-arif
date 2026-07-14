@@ -41,6 +41,13 @@
   flex-direction: column;
   gap: 30px;
   backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(94, 234, 212, 0.3);
+  background: rgba(94, 234, 212, 0.05);
 }
 
 .contact-card h4 {
@@ -92,6 +99,7 @@ a.contact-item:hover .contact-value {
   gap: 8px;
   color: #eae5ec;
   transition: color 0.3s ease;
+  word-break: break-word;
 }
 
 .text-green {
@@ -143,6 +151,7 @@ a.contact-item:hover .contact-value {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
+    padding-bottom: 15px;
   }
   .contact-container h2 {
     font-size: 45px;

@@ -5,19 +5,20 @@
   justify-content: center;
   position: relative;
   width: 100%;
+  box-sizing: border-box;
   margin: auto;
   z-index: 9;
-  padding: 100px 0;
+  padding: 80px 24px;
 }
 
 .what-header {
   width: 100%;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
 .what-header h2 {
-  font-size: 70px;
+  font-size: clamp(32px, 6vw, 70px);
   font-weight: 500;
   margin: 0;
   text-align: center;
@@ -36,7 +37,7 @@
 .what-boxes-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   width: 100%;
   max-width: 1200px;
 }
@@ -46,7 +47,7 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 20px;
-  padding: 40px;
+  padding: 32px 28px;
   box-sizing: border-box;
   transition: transform 0.3s ease, border-color 0.3s ease;
   backdrop-filter: blur(10px);
@@ -59,47 +60,47 @@
 }
 
 .what-content-in h3 {
-  font-size: 32px;
-  letter-spacing: 1px;
+  font-size: clamp(18px, 3vw, 32px);
+  letter-spacing: 0.5px;
   margin: 0;
   color: #fff;
 }
 
 .what-content-in h4 {
   font-weight: 400;
-  letter-spacing: 1px;
-  margin: 10px 0 20px 0;
-  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin: 8px 0 16px 0;
+  font-size: clamp(14px, 2vw, 18px);
   color: #a1a1aa;
 }
 
 .what-content-in p {
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.7;
   font-weight: 300;
   color: #d4d4d8;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .what-content-in h5 {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: 1px;
   color: var(--accentColor);
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .what-content-flex {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .what-tags {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
-  padding: 6px 14px;
+  padding: 5px 12px;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 30px;
@@ -109,30 +110,44 @@
 @media only screen and (min-width: 1024px) {
   .what-boxes-container {
     flex-direction: row;
+    gap: 32px;
   }
   .what-content-static {
     width: 50%;
-    padding: 50px;
+    padding: 48px;
+  }
+  .whatIDO {
+    padding: 100px 24px;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  .whatIDO {
+    padding: 60px 24px;
+  }
   .what-content-static {
-    padding: 25px;
+    padding: 24px 20px;
   }
-  .what-content-in h3 {
-    font-size: 24px;
-  }
-  .what-header h2 {
-    font-size: 50px;
+  .what-header {
+    margin-bottom: 36px;
   }
 }
 
-@media only screen and (max-width: 480px) { 
-  .what-header h2 { font-size: 26px; } 
-  .what-content-in h3 { font-size: 18px; } 
-  .what-content-in h4 { font-size: 15px; } 
-  .what-content-in p { font-size: 13px; margin-bottom: 20px; } 
-  .what-content-static { padding: 15px; } 
-  .what-tags { font-size: 12px; padding: 5px 12px; } 
+@media only screen and (max-width: 480px) {
+  .whatIDO {
+    padding: 50px 16px;
+  }
+  .what-content-static {
+    padding: 20px 16px;
+    border-radius: 16px;
+  }
+  .what-boxes-container {
+    gap: 16px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .whatIDO {
+    padding: 40px 14px;
+  }
 }

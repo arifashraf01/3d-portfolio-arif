@@ -1,14 +1,15 @@
 .techstack-section {
-  padding: 100px 0;
+  padding: 80px 0;
   margin: 0 auto;
-  margin-top: 100px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .techstack-section h2 {
-  font-size: 60px;
+  font-size: clamp(28px, 5vw, 60px);
   font-weight: 500;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   background: linear-gradient(0deg, #0d9488, #ffffff);
   background-clip: text;
   -webkit-background-clip: text;
@@ -18,14 +19,14 @@
 .tech-groups {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 48px;
 }
 
 .tech-category h3 {
-  font-size: 28px;
+  font-size: clamp(18px, 3vw, 28px);
   font-weight: 400;
   color: var(--accentColor);
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 10px;
@@ -33,8 +34,8 @@
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 16px;
   justify-content: center;
 }
 
@@ -42,11 +43,11 @@
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
-  padding: 30px 20px;
+  padding: 24px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 12px;
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.3s ease, border-color 0.3s ease, box-shadow 0.4s ease;
   backdrop-filter: blur(10px);
 }
@@ -59,17 +60,17 @@
 }
 
 .tech-icon-wrapper {
-  width: 60px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .tech-icon-wrapper svg {
-  font-size: 50px;
+  font-size: 40px;
   color: #eae5ec;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
   transition: color 0.3s ease;
 }
 
@@ -78,29 +79,51 @@
 }
 
 .tech-card span {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   color: #eae5ec;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 @media (max-width: 768px) {
-  .tech-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .techstack-section {
+    padding: 60px 0;
   }
-  .techstack-section h2 {
-    font-size: 40px;
+  .tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 12px;
   }
 }
 
 @media (max-width: 480px) {
-  .techstack-section h2 {
-    font-size: 32px;
+  .techstack-section {
+    padding: 48px 0;
+  }
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
   .tech-card {
-    padding: 20px 10px;
+    padding: 16px 10px;
+    gap: 8px;
   }
   .tech-icon-wrapper svg {
-    font-size: 40px;
+    font-size: 32px;
+  }
+  .tech-card span {
+    font-size: 11px;
+  }
+  .tech-groups {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 375px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .tech-card {
+    padding: 12px 8px;
   }
 }

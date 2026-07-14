@@ -8,7 +8,7 @@ const projects = [
   {
     title: "DPI Engine",
     category: "Deep Packet Inspection System",
-    tools: "C++, Networking, PCAP Parsing, Multithreading, TLS",
+    tools: ["C++", "Networking", "PCAP Parsing", "Multithreading", "TLS"],
     image: `${baseUrl}images/dpi-engine.svg`,
     link: "https://github.com/arifashraf01/Packet_analyzer",
     description: "A high-performance C++ packet analyzer that processes raw PCAP files and captures live network traffic to extract detailed transport and application layer information.",
@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Real-Time Chat Application",
     category: "Spring Boot WebSocket Chat",
-    tools: "Java, Spring Boot, WebSocket, REST APIs",
+    tools: ["Java", "Spring Boot", "WebSocket", "REST APIs"],
     image: `${baseUrl}images/chatapp.png`,
     link: "https://github.com/arifashraf01/ephemeral-chat-system",
     description: "A secure, ephemeral messaging platform built with Spring Boot and WebSockets, featuring real-time bi-directional communication.",
@@ -26,7 +26,7 @@ const projects = [
   {
     title: "Django AI Assistant",
     category: "AI Integration & Backend",
-    tools: "Python, Django, LLM API, REST Framework",
+    tools: ["Python", "Django", "LLM API", "REST Framework"],
     image: `${baseUrl}images/ai-assist.png`, 
     link: "https://github.com/arifashraf01/Django-AI-Assistant",
     description: "An intelligent backend service powered by Django and AI models to automate tasks, process natural language, and provide context-aware responses.",
@@ -35,7 +35,7 @@ const projects = [
   {
     title: "Matrix Chat App",
     category: "Frontend UI/UX",
-    tools: "React, TypeScript, Tailwind CSS",
+    tools: ["React", "TypeScript", "Tailwind CSS"],
     image: `${baseUrl}images/matrix-chat.png`, 
     link: "https://github.com/arifashraf01/Matrix_chat_frontend",
     description: "A sleek, responsive frontend interface for a modern chat application, focusing on real-time UX, clean architecture, and fluid interactions.",
@@ -61,7 +61,11 @@ const Work = () => {
                   <p className="work-description">{project.description}</p>
                   <div className="work-tools">
                     <span className="tools-label">Tools & Features</span>
-                    <p>{project.tools}</p>
+                    <div className="tools-tags">
+                      {project.tools.map((tool, i) => (
+                        <span key={i} className="tool-tag">{tool}</span>
+                      ))}
+                    </div>
                   </div>
                   <a href={project.link} target="_blank" rel="noreferrer" className="work-github-btn">
                     <FaGithub /> View on GitHub

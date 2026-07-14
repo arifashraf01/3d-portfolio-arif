@@ -4,8 +4,8 @@ const WhatIDo = () => {
   return (
     <div className="whatIDO section-container">
       <div className="what-header">
-        <h2 className="title">
-          W<span className="hat-h2">HAT</span> I<span className="do-h2"> DO</span>
+        <h2>
+          What I <span>Do</span>
         </h2>
       </div>
       <div className="what-boxes-container">

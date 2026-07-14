@@ -78,13 +78,13 @@
 }
 
 .landing-bio {
-  font-size: 16px;
-  color: #a1a1aa;
-  margin: 5px 0 15px 0;
+  font-size: 18px;
+  color: #d4d4d8;
+  margin: 15px 0 25px 0;
   letter-spacing: 0.5px;
   font-weight: 300;
   max-width: 650px;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .landing-actions {
@@ -94,38 +94,41 @@
 }
 
 .btn-primary, .btn-secondary {
-  padding: 14px 32px;
+  padding: 16px 36px;
   font-size: 16px;
-  font-weight: 500;
-  border-radius: 8px;
+  font-weight: 600;
+  border-radius: 50px;
   letter-spacing: 1px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .btn-primary {
   background: var(--accentColor);
   color: #050810;
   border: 1px solid var(--accentColor);
+  box-shadow: 0 4px 14px rgba(94, 234, 212, 0.3);
 }
 
 .btn-primary:hover {
   background: #14b8a6;
   border-color: #14b8a6;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(20, 184, 166, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(20, 184, 166, 0.4);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
   color: #eae5ec;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-3px);
+  color: var(--accentColor);
 }
 
 

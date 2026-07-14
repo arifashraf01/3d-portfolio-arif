@@ -13,7 +13,8 @@ const SocialIcons = () => {
           <a
             href="https://github.com/arifashraf01"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
           >
             <FaGithub />
           </a>
@@ -22,7 +23,8 @@ const SocialIcons = () => {
           <a
             href="https://www.linkedin.com/in/arif-ashraf-3abb89179"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
           >
             <FaLinkedinIn />
           </a>
@@ -32,7 +34,8 @@ const SocialIcons = () => {
         className="resume-button"
         href={resumeUrl}
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
+        aria-label="View Resume"
       >
         <HoverLinks text="RESUME" />
         <span>

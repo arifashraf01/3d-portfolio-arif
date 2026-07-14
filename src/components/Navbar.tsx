@@ -11,17 +11,17 @@ const Navbar = () => {
 
         <ul>
           <li>
-            <a href="#about">
+            <a href="#about" aria-label="About Section">
               <HoverLinks text="ABOUT" />
             </a>
           </li>
           <li>
-            <a href="#work">
+            <a href="#work" aria-label="Projects Section">
               <HoverLinks text="WORK" />
             </a>
           </li>
           <li>
-            <a href="#contact">
+            <a href="#contact" aria-label="Contact Section">
               <HoverLinks text="CONTACT" />
             </a>
           </li>

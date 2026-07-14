@@ -15,10 +15,26 @@
   -webkit-text-fill-color: transparent;
 }
 
+.tech-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.tech-category h3 {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin-bottom: 30px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+}
+
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 25px;
   justify-content: center;
 }
 

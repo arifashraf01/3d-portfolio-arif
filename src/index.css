@@ -47,6 +47,8 @@ a:hover {
 html {
   background-color: #050810;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -56,8 +58,14 @@ body {
   flex-grow: 1;
   --cWidth: 100%;
   --cMaxWidth: 1920px;
+  width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .main-body {

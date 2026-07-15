@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
@@ -11,15 +11,8 @@ import Contact from "./Contact";
 import TechStack from "./TechStack";
 
 const MainContainer = () => {
-  const [isDesktopView, setIsDesktopView] = useState<boolean>(
-    window.innerWidth > 1024
-  );
-
   useEffect(() => {
-    const resizeHandler = () => {
-      setIsDesktopView(window.innerWidth > 1024);
-    };
-    resizeHandler();
+    const resizeHandler = () => {};
     window.addEventListener("resize", resizeHandler, { passive: true });
     return () => {
       window.removeEventListener("resize", resizeHandler);
@@ -36,7 +29,7 @@ const MainContainer = () => {
         <WhatIDo />
         <Career />
         <Work />
-        {isDesktopView && <TechStack />}
+        <TechStack />
         <Contact />
       </div>
     </div>

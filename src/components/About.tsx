@@ -6,7 +6,18 @@ const About = () => {
       <div className="about-me">
         <h3>About Me</h3>
         <p>
-          I am a Full Stack Developer passionate about building scalable backend systems and clean, intuitive user interfaces. With extensive experience in Java, Spring Boot, Django, React, PostgreSQL, and modern web development, I thrive on designing robust REST APIs and deploying applications using Git and Docker. Outside of product development, I enjoy sharpening my problem-solving skills by tackling complex algorithmic challenges on LeetCode.
+          I'm a Full Stack Developer focused on building backend systems that are
+          fast, reliable, and built to scale — and frontends that are clean and
+          intentional. I work primarily with <strong>Java</strong>,{" "}
+          <strong>Spring Boot</strong>, <strong>Django</strong>, and{" "}
+          <strong>React</strong>, with hands-on experience in{" "}
+          <strong>PostgreSQL</strong>, <strong>REST API</strong> design,{" "}
+          <strong>Docker</strong>, and <strong>Git</strong>.
+        </p>
+        <p>
+          Outside of product work, I enjoy solving algorithmic problems on
+          LeetCode — I find it sharpens the way I think about performance and
+          tradeoffs in real systems.
         </p>
       </div>
     </div>

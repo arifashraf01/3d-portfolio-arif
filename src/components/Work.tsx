@@ -7,39 +7,43 @@ const baseUrl = import.meta.env.BASE_URL;
 const projects = [
   {
     title: "DPI Engine",
-    category: "Deep Packet Inspection System",
-    tools: ["C++", "Networking", "PCAP Parsing", "Multithreading", "TLS"],
+    category: "Deep Packet Inspection · Systems Programming",
+    tools: ["C++", "Networking", "PCAP", "Multithreading", "TLS"],
     image: `${baseUrl}images/dpi-engine.svg`,
     link: "https://github.com/arifashraf01/Packet_analyzer",
-    description: "A high-performance C++ packet analyzer that processes raw PCAP files and captures live network traffic to extract detailed transport and application layer information.",
-    icon: <MdOutlineCode />
+    description:
+      "A high-performance C++ packet analyzer that processes raw PCAP files and captures live traffic, extracting transport and application-layer details including TLS session metadata.",
+    icon: <MdOutlineCode />,
   },
   {
-    title: "Real-Time Chat Application",
-    category: "Spring Boot WebSocket Chat",
+    title: "Real-Time Chat App",
+    category: "Spring Boot · WebSocket",
     tools: ["Java", "Spring Boot", "WebSocket", "REST APIs"],
     image: `${baseUrl}images/chatapp.png`,
     link: "https://github.com/arifashraf01/ephemeral-chat-system",
-    description: "A secure, ephemeral messaging platform built with Spring Boot and WebSockets, featuring real-time bi-directional communication.",
-    icon: <MdChatBubbleOutline />
+    description:
+      "An ephemeral messaging platform with WebSocket-powered bi-directional communication, built on Spring Boot with session-scoped message storage and clean REST endpoints.",
+    icon: <MdChatBubbleOutline />,
   },
   {
     title: "Django AI Assistant",
-    category: "AI Integration & Backend",
+    category: "AI Integration · Backend",
     tools: ["Python", "Django", "LLM API", "REST Framework"],
-    image: `${baseUrl}images/ai-assist.png`, 
+    image: `${baseUrl}images/ai-assist.png`,
     link: "https://github.com/arifashraf01/Django-AI-Assistant",
-    description: "An intelligent backend service powered by Django and AI models to automate tasks, process natural language, and provide context-aware responses.",
-    icon: <MdOutlineSmartToy />
+    description:
+      "An intelligent backend service that wires Django to large language model APIs, handling context management, prompt engineering, and natural language response delivery.",
+    icon: <MdOutlineSmartToy />,
   },
   {
-    title: "Matrix Chat App",
-    category: "Frontend UI/UX",
+    title: "Matrix Chat Frontend",
+    category: "Frontend · UI/UX",
     tools: ["React", "TypeScript", "Tailwind CSS"],
-    image: `${baseUrl}images/matrix-chat.png`, 
+    image: `${baseUrl}images/matrix-chat.png`,
     link: "https://github.com/arifashraf01/Matrix_chat_frontend",
-    description: "A sleek, responsive frontend interface for a modern chat application, focusing on real-time UX, clean architecture, and fluid interactions.",
-    icon: <MdChatBubbleOutline />
+    description:
+      "A polished React + TypeScript frontend for a real-time chat platform, with a focus on smooth interactions, clean component architecture, and a responsive layout.",
+    icon: <MdChatBubbleOutline />,
   },
 ];
 
@@ -60,25 +64,35 @@ const Work = () => {
                   <p className="work-category">{project.category}</p>
                   <p className="work-description">{project.description}</p>
                   <div className="work-tools">
-                    <span className="tools-label">Tools & Features</span>
+                    <span className="tools-label">Stack</span>
                     <div className="tools-tags">
                       {project.tools.map((tool, i) => (
-                        <span key={i} className="tool-tag">{tool}</span>
+                        <span key={i} className="tool-tag">
+                          {tool}
+                        </span>
                       ))}
                     </div>
                   </div>
-                  <a href={project.link} target="_blank" rel="noreferrer" className="work-github-btn">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="work-github-btn"
+                    aria-label={`View ${project.title} on GitHub`}
+                  >
                     <FaGithub /> View on GitHub
                   </a>
                 </div>
               </div>
               <div className="work-image-container">
                 {project.image ? (
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                  />
                 ) : (
-                  <div className="work-placeholder">
-                    {project.icon}
-                  </div>
+                  <div className="work-placeholder">{project.icon}</div>
                 )}
               </div>
             </div>

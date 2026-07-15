@@ -18,7 +18,7 @@
 }
 
 .what-header h2 {
-  font-size: clamp(32px, 6vw, 70px);
+  font-size: clamp(28px, 6vw, 70px);
   font-weight: 500;
   margin: 0;
   text-align: center;
@@ -75,11 +75,11 @@
 }
 
 .what-content-in p {
-  font-size: clamp(14px, 1.8vw, 16px);
+  font-size: clamp(13px, 1.8vw, 16px);
   line-height: 1.7;
   font-weight: 300;
   color: #d4d4d8;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .what-content-in h5 {
@@ -135,14 +135,30 @@
 
 @media only screen and (max-width: 480px) {
   .whatIDO {
-    padding: 50px 16px;
+    padding: 44px 14px;
+  }
+  .what-header h2 {
+    font-size: clamp(22px, 6vw, 32px);
   }
   .what-content-static {
-    padding: 20px 16px;
-    border-radius: 16px;
+    padding: 18px 14px;
+    border-radius: 14px;
   }
   .what-boxes-container {
-    gap: 16px;
+    gap: 14px;
+  }
+  .what-content-in h3 {
+    font-size: 17px;
+  }
+  .what-content-in h4 {
+    font-size: 13px;
+  }
+  .what-content-in p {
+    font-size: 12px;
+  }
+  .what-tags {
+    font-size: 11px;
+    padding: 4px 10px;
   }
 }
 

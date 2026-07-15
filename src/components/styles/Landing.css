@@ -47,9 +47,9 @@
 
 .landing-greeting {
   color: var(--accentColor);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
-  letter-spacing: 3px;
+  letter-spacing: clamp(2px, 1vw, 3px);
   margin: 0;
   text-transform: uppercase;
 }
@@ -82,13 +82,14 @@
 }
 
 .landing-bio {
-  font-size: clamp(14px, 2.5vw, 18px);
+  font-size: clamp(13px, 2.5vw, 18px);
   color: #d4d4d8;
   margin: 10px 0 20px 0;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   font-weight: 300;
   max-width: 600px;
   line-height: 1.7;
+  width: 100%;
 }
 
 .landing-actions {
@@ -160,14 +161,25 @@
 /* ── Mobile (≤480px) ── */
 @media screen and (max-width: 480px) {
   .landing-section {
-    padding: 80px 16px 40px;
+    padding: 76px 16px 36px;
   }
   .landing-greeting {
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 2px;
   }
+  .landing-name {
+    font-size: clamp(28px, 8vw, 60px);
+    letter-spacing: 1px;
+  }
+  .landing-role {
+    font-size: clamp(13px, 3.5vw, 20px);
+  }
+  .landing-bio {
+    font-size: 13px;
+    margin: 6px 0 14px;
+  }
   .landing-content {
-    gap: 12px;
+    gap: 10px;
   }
   .landing-actions {
     flex-direction: column;
@@ -178,8 +190,10 @@
   .btn-primary,
   .btn-secondary {
     width: 100%;
-    padding: 14px 20px;
+    padding: 13px 16px;
     min-width: unset;
+    font-size: 12px;
+    letter-spacing: 0.8px;
   }
 }
 

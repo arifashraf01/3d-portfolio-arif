@@ -4,7 +4,7 @@
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
+  padding: 14px 16px;
   box-sizing: border-box;
   position: fixed;
   left: 0;
@@ -14,16 +14,17 @@
   background: rgba(5, 8, 16, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
 }
 
 .header ul {
-  font-size: 12px;
+  font-size: 11px;
   display: flex;
   flex-direction: row;
   margin: 0;
   padding: 0;
   list-style: none;
-  column-gap: 20px;
+  column-gap: 14px;
   align-items: center;
 }
 

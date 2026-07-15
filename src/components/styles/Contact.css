@@ -17,7 +17,7 @@
 }
 
 .contact-container h2 {
-  font-size: clamp(28px, 7vw, 80px);
+  font-size: clamp(24px, 7vw, 80px);
   font-weight: 500;
   margin: 0;
   text-align: center;
@@ -96,14 +96,15 @@ a.contact-item:hover .contact-value {
 }
 
 .contact-value {
-  font-size: clamp(13px, 1.8vw, 18px);
+  font-size: clamp(12px, 1.8vw, 18px);
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 6px;
   color: #eae5ec;
   transition: color 0.3s ease;
-  word-break: break-all;
+  word-break: break-word;
+  overflow-wrap: anywhere;
   text-align: right;
 }
 
@@ -156,24 +157,41 @@ a.contact-item:hover .contact-value {
 /* ── ≤480px ── */
 @media only screen and (max-width: 480px) {
   .contact-section {
-    padding: 48px 0 32px;
+    padding: 44px 0 28px;
   }
   .contact-container {
-    gap: 32px;
+    gap: 28px;
+  }
+  .contact-container h2 {
+    font-size: clamp(20px, 6vw, 28px);
   }
   .contact-card {
-    padding: 20px 16px;
-    border-radius: 16px;
+    padding: 18px 14px;
+    border-radius: 14px;
+    gap: 18px;
+  }
+  .contact-card h4 {
+    font-size: 15px;
   }
   .contact-item {
     flex-direction: column;
     align-items: flex-start;
-    gap: 6px;
-    padding-bottom: 12px;
+    gap: 4px;
+    padding-bottom: 10px;
+  }
+  .contact-label {
+    font-size: 11px;
   }
   .contact-value {
+    font-size: 12px;
     text-align: left;
     word-break: break-word;
+  }
+  .contact-footer h3 {
+    font-size: 14px;
+  }
+  .contact-footer p {
+    font-size: 11px;
   }
 }
 

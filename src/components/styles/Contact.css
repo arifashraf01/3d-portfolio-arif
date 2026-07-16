@@ -1,5 +1,5 @@
 .contact-section {
-  padding: 100px 0 72px;
+  padding: 110px 0 80px;
   position: relative;
   z-index: 2;
   background-color: var(--bg-secondary);
@@ -9,11 +9,13 @@
 }
 
 .contact-container {
-  max-width: 900px;
+  max-width: 960px;
   margin: auto;
+  padding: 0 var(--section-padding-x);
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 56px;
 }
 
 .contact-container h2 {
@@ -32,35 +34,37 @@
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 24px;
 }
 
 .contact-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 18px;
-  padding: 32px 28px;
+  border-radius: 20px;
+  padding: 36px 32px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
   backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease,
+    background 0.3s ease, box-shadow 0.3s ease;
   box-sizing: border-box;
 }
 
 .contact-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: var(--border-accent);
   background: var(--accent-glow);
+  box-shadow: 0 12px 36px rgba(94, 234, 212, 0.07);
 }
 
 .contact-card h4 {
-  font-weight: 500;
-  font-size: clamp(13px, 1.6vw, 17px);
+  font-weight: 600;
+  font-size: clamp(11px, 1.4vw, 14px);
   margin: 0;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 /* ── Contact Items ── */
@@ -74,7 +78,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
+  padding: 15px 0;
   border-bottom: 1px solid var(--border-subtle);
   transition: all 0.25s ease;
   gap: 16px;
@@ -91,7 +95,7 @@
 }
 
 a.contact-item:hover {
-  border-bottom-color: var(--accent);
+  border-bottom-color: rgba(94, 234, 212, 0.3);
 }
 
 a.contact-item:hover .contact-value {
@@ -103,6 +107,7 @@ a.contact-item:hover .contact-value {
   color: var(--text-muted);
   font-weight: 400;
   flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .contact-value {
@@ -127,8 +132,8 @@ a.contact-item:hover .contact-value {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding-top: 8px;
+  gap: 10px;
+  padding-top: 12px;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -156,36 +161,37 @@ a.contact-item:hover .contact-value {
 /* ── Tablet ── */
 @media only screen and (max-width: 768px) {
   .contact-section {
-    padding: 72px 0 52px;
+    padding: 80px 0 60px;
   }
   .contact-container {
-    gap: 36px;
+    gap: 40px;
   }
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 18px;
   }
   .contact-card {
-    padding: 24px 20px;
-    border-radius: 14px;
+    padding: 28px 24px;
+    border-radius: 16px;
+    gap: 18px;
   }
 }
 
 /* ── Mobile ── */
 @media only screen and (max-width: 480px) {
   .contact-section {
-    padding: 56px 0 40px;
+    padding: 64px 0 48px;
   }
   .contact-container {
-    gap: 28px;
+    gap: 32px;
   }
   .contact-container h2 {
-    font-size: clamp(22px, 6.5vw, 30px);
+    font-size: clamp(24px, 7vw, 32px);
   }
   .contact-card {
-    padding: 20px 16px;
-    border-radius: 12px;
-    gap: 14px;
+    padding: 22px 18px;
+    border-radius: 14px;
+    gap: 16px;
   }
   .contact-card h4 {
     font-size: 11px;
@@ -200,7 +206,7 @@ a.contact-item:hover .contact-value {
     font-size: 11px;
   }
   .contact-value {
-    font-size: 12px;
+    font-size: 13px;
     text-align: left;
   }
   .contact-footer h3 {
@@ -213,9 +219,9 @@ a.contact-item:hover .contact-value {
 
 @media only screen and (max-width: 375px) {
   .contact-section {
-    padding: 44px 0 32px;
+    padding: 52px 0 40px;
   }
   .contact-card {
-    padding: 16px 12px;
+    padding: 18px 14px;
   }
 }

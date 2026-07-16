@@ -102,14 +102,6 @@ body {
   position: relative;
 }
 
-/* ── Shared section container ── */
-.section-container {
-  padding-left: var(--section-padding-x);
-  padding-right: var(--section-padding-x);
-  box-sizing: border-box;
-  width: 100%;
-}
-
 /* ── Viewport-aware widths ── */
 @media screen and (max-width: 480px) {
   :root {

@@ -47,23 +47,25 @@ const techGroups = [
 const TechStack = () => {
   return (
     <div className="techstack-section section-container" id="skills">
-      <h2>My Tech Stack</h2>
-      <div className="tech-groups">
-        {techGroups.map((group, index) => (
-          <div className="tech-category" key={index}>
-            <h3>{group.category}</h3>
-            <div className="tech-grid">
-              {group.items.map((tech, i) => (
-                <div className="tech-card" key={i}>
-                  <div className="tech-icon-wrapper">
-                    {tech.icon}
+      <div className="techstack-inner">
+        <h2>My Tech Stack</h2>
+        <div className="tech-groups">
+          {techGroups.map((group, index) => (
+            <div className="tech-category" key={index}>
+              <h3>{group.category}</h3>
+              <div className="tech-grid">
+                {group.items.map((tech, i) => (
+                  <div className="tech-card" key={i}>
+                    <div className="tech-icon-wrapper">
+                      {tech.icon}
+                    </div>
+                    <span>{tech.name}</span>
                   </div>
-                  <span>{tech.name}</span>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

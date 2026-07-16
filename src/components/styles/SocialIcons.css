@@ -49,7 +49,7 @@
 .resume-button {
   position: absolute;
   z-index: 99;
-  display: flex;
+  display: none;
   gap: 5px;
   bottom: 40px;
   right: 16px;
@@ -63,7 +63,6 @@
   cursor: pointer;
   transition: color 0.3s ease;
   transform-origin: right bottom;
-  transform: translateY(100%) rotateZ(-90deg);
   pointer-events: all;
 }
 
@@ -79,7 +78,19 @@ div.resume-button span {
   align-items: center;
 }
 
-/* ── Desktop ── */
+/* ── Tablet ── */
+@media only screen and (min-width: 768px) {
+  .resume-button {
+    display: flex;
+    transform: translateY(100%) rotateZ(-90deg);
+    transform-origin: right bottom;
+    font-size: 13px;
+    line-height: 13px;
+    right: 16px;
+    letter-spacing: 3px;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   .social-icons {
     display: flex;
@@ -88,9 +99,6 @@ div.resume-button span {
   .social-icons a {
     font-size: 26px;
   }
-}
-
-@media only screen and (min-width: 768px) {
   .resume-button {
     transform: none;
     font-size: 18px;

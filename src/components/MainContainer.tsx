@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Landing from "./Landing";
 import Navbar from "./Navbar";
 import SocialIcons from "./SocialIcons";
@@ -11,14 +10,6 @@ import Contact from "./Contact";
 import TechStack from "./TechStack";
 
 const MainContainer = () => {
-  useEffect(() => {
-    const resizeHandler = () => {};
-    window.addEventListener("resize", resizeHandler, { passive: true });
-    return () => {
-      window.removeEventListener("resize", resizeHandler);
-    };
-  }, []);
-
   return (
     <div className="container-main">
       <Navbar />

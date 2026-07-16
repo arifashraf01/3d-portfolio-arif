@@ -8,14 +8,14 @@
   box-sizing: border-box;
   margin: auto;
   z-index: 9;
-  padding: 100px 24px;
+  padding: 110px var(--section-padding-x);
 }
 
 /* ── Section Header ── */
 .what-header {
   width: 100%;
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: 60px;
 }
 
 .what-header h2 {
@@ -32,14 +32,13 @@
 .what-header h2 > span {
   font-family: "Geist", sans-serif;
   font-weight: 300;
-  color: var(--accent);
 }
 
 /* ── Cards Container ── */
 .what-boxes-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   width: 100%;
   max-width: 1100px;
 }
@@ -48,52 +47,55 @@
   width: 100%;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 18px;
-  padding: 36px 32px;
+  border-radius: 20px;
+  padding: 40px 36px;
   box-sizing: border-box;
-  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease, background 0.3s ease, box-shadow 0.35s ease;
   backdrop-filter: blur(8px);
 }
 
 .what-content-static:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: var(--border-accent);
   background: var(--accent-glow);
+  box-shadow: 0 12px 32px rgba(94, 234, 212, 0.07);
 }
 
 /* ── Card Content ── */
 .what-content-in h3 {
-  font-size: clamp(13px, 1.8vw, 18px);
-  letter-spacing: clamp(1px, 0.5vw, 2px);
-  margin: 0 0 6px;
+  font-size: clamp(11px, 1.6vw, 14px);
+  letter-spacing: clamp(1.5px, 0.6vw, 2.5px);
+  margin: 0 0 8px;
   color: var(--accent);
   text-transform: uppercase;
   font-weight: 600;
 }
 
 .what-content-in h4 {
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  margin: 0 0 16px;
-  font-size: clamp(16px, 2.2vw, 24px);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin: 0 0 18px;
+  font-size: clamp(17px, 2.4vw, 26px);
   color: var(--text-primary);
+  line-height: 1.3;
 }
 
 .what-content-in p {
   font-size: clamp(13px, 1.6vw, 15px);
-  line-height: 1.75;
+  line-height: 1.8;
   font-weight: 300;
   color: var(--text-secondary);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .what-content-in h5 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 11px;
   letter-spacing: 1.5px;
   color: var(--text-muted);
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 /* ── Tags ── */
@@ -106,16 +108,17 @@
 .what-tags {
   font-size: 12px;
   font-weight: 400;
-  padding: 4px 12px;
+  padding: 5px 14px;
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 30px;
   color: var(--text-secondary);
   transition: border-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
 }
 
 .what-content-static:hover .what-tags {
-  border-color: rgba(94, 234, 212, 0.2);
+  border-color: rgba(94, 234, 212, 0.22);
   color: var(--text-primary);
 }
 
@@ -123,74 +126,79 @@
 @media only screen and (min-width: 1024px) {
   .what-boxes-container {
     flex-direction: row;
-    gap: 24px;
+    gap: 28px;
   }
   .what-content-static {
     width: 50%;
-    padding: 44px 40px;
+    padding: 48px 44px;
   }
   .whatIDO {
-    padding: 120px 24px;
+    padding: 130px var(--section-padding-x);
   }
 }
 
 /* ── Tablet ── */
 @media only screen and (max-width: 1023px) {
   .whatIDO {
-    padding: 80px 24px;
+    padding: 90px var(--section-padding-x);
   }
   .what-header {
-    margin-bottom: 40px;
+    margin-bottom: 44px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .whatIDO {
-    padding: 64px 20px;
+    padding: 72px var(--section-padding-x);
   }
   .what-content-static {
-    padding: 28px 24px;
+    padding: 30px 26px;
+    border-radius: 16px;
   }
   .what-header {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
   }
 }
 
 /* ── Mobile ── */
 @media only screen and (max-width: 480px) {
   .whatIDO {
-    padding: 52px 14px;
+    padding: 60px var(--section-padding-x);
   }
   .what-header h2 {
-    font-size: clamp(22px, 6.5vw, 30px);
+    font-size: clamp(24px, 7vw, 32px);
   }
   .what-content-static {
-    padding: 22px 18px;
+    padding: 24px 20px;
     border-radius: 14px;
   }
   .what-boxes-container {
-    gap: 14px;
+    gap: 16px;
   }
   .what-content-in h3 {
     font-size: 11px;
     letter-spacing: 1px;
   }
   .what-content-in h4 {
-    font-size: 16px;
-    margin-bottom: 12px;
+    font-size: 17px;
+    margin-bottom: 14px;
   }
   .what-content-in p {
     font-size: 13px;
-    margin-bottom: 14px;
+    margin-bottom: 18px;
+    line-height: 1.78;
   }
   .what-tags {
     font-size: 11px;
-    padding: 3px 10px;
+    padding: 4px 11px;
   }
 }
 
 @media only screen and (max-width: 375px) {
   .whatIDO {
-    padding: 44px 12px;
+    padding: 52px var(--section-padding-x);
+  }
+  .what-content-static {
+    padding: 20px 16px;
   }
 }

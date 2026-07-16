@@ -4,18 +4,18 @@
   /* Colors */
   --accent: #5eead4;
   --accent-hover: #14b8a6;
-  --accent-glow: rgba(94, 234, 212, 0.15);
+  --accent-glow: rgba(94, 234, 212, 0.12);
   --bg-primary: #050810;
   --bg-secondary: #0a0e17;
-  --bg-card: rgba(255, 255, 255, 0.02);
-  --border-subtle: rgba(255, 255, 255, 0.06);
+  --bg-card: rgba(255, 255, 255, 0.025);
+  --border-subtle: rgba(255, 255, 255, 0.07);
   --border-accent: rgba(94, 234, 212, 0.3);
   --text-primary: #eae5ec;
   --text-secondary: #d4d4d8;
   --text-muted: #a1a1aa;
   --text-dim: #71717a;
 
-  /* Legacy aliases (keep for backward compat) */
+  /* Legacy aliases */
   --accentColor: var(--accent);
   --backgroundColor: var(--bg-secondary);
 
@@ -23,7 +23,7 @@
   font-family: "Geist", system-ui, -apple-system, sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--text-primary);
   background-color: var(--bg-primary);
   font-synthesis: none;
@@ -39,6 +39,8 @@
 
   /* Layout */
   --cMaxWidth: 1920px;
+  --section-padding-x: clamp(16px, 5vw, 60px);
+  --section-padding-y: clamp(64px, 10vw, 120px);
 }
 
 /* ── Global Reset ── */
@@ -75,7 +77,6 @@ html {
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
-  /* Safe area for notched devices */
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
@@ -101,10 +102,25 @@ body {
   position: relative;
 }
 
+/* ── Shared section container ── */
+.section-container {
+  padding-left: var(--section-padding-x);
+  padding-right: var(--section-padding-x);
+  box-sizing: border-box;
+  width: 100%;
+}
+
 /* ── Viewport-aware widths ── */
 @media screen and (max-width: 480px) {
-  /* Hard stop any overflow-causing elements */
-  [class] {
-    max-width: 100%;
+  :root {
+    --section-padding-x: 14px;
+    --section-padding-y: 52px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  :root {
+    --section-padding-x: 12px;
+    --section-padding-y: 44px;
   }
 }

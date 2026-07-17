@@ -1,4 +1,4 @@
-import { MdArrowOutward, MdCopyright } from "react-icons/md";
+import { MdArrowOutward, MdCopyright, MdOpenInNew } from "react-icons/md";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -46,6 +46,16 @@ const Contact = () => {
           </div>
 
         </div>
+
+        <a
+          href={`${import.meta.env.BASE_URL}arifashraf_resume.pdf?v=20260416-1`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-resume-btn"
+          aria-label="View Resume"
+        >
+          View Resume <MdOpenInNew />
+        </a>
 
         <div className="contact-footer">
           <h3>Designed and Developed by <span>Arif Ashraf</span></h3>

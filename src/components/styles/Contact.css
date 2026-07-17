@@ -127,6 +127,35 @@ a.contact-item:hover .contact-value {
   color: var(--accent);
 }
 
+/* ── Mobile Resume Button ── */
+.contact-resume-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-resume-btn svg {
+  font-size: 17px;
+}
+
+.contact-resume-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(94, 234, 212, 0.05);
+  transform: translateY(-2px);
+}
+
 /* ── Footer ── */
 .contact-footer {
   text-align: center;
@@ -175,6 +204,9 @@ a.contact-item:hover .contact-value {
     border-radius: 16px;
     gap: 18px;
   }
+  .contact-resume-btn {
+    display: flex;
+  }
 }
 
 /* ── Mobile ── */
@@ -214,6 +246,10 @@ a.contact-item:hover .contact-value {
   }
   .contact-footer p {
     font-size: 11px;
+  }
+  .contact-resume-btn {
+    width: 100%;
+    font-size: 13px;
   }
 }
 

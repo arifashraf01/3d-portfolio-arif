@@ -6,7 +6,6 @@
   width: 100%;
   box-sizing: border-box;
   margin: auto;
-  padding: 110px var(--section-padding-x);
   text-align: center;
 }
 
@@ -49,18 +48,12 @@
 
 /* ── Tablet ── */
 @media only screen and (max-width: 1024px) {
-  .about-section {
-    padding: 90px var(--section-padding-x);
-  }
   .about-me p {
     font-size: clamp(15px, 2vw, 18px);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .about-section {
-    padding: 80px var(--section-padding-x);
-  }
   .about-me p {
     font-size: 16px;
     line-height: 1.8;
@@ -76,9 +69,6 @@
 
 /* ── Mobile ── */
 @media only screen and (max-width: 480px) {
-  .about-section {
-    padding: 68px var(--section-padding-x);
-  }
   .about-me p {
     font-size: 14px;
     line-height: 1.8;
@@ -95,9 +85,6 @@
 }
 
 @media only screen and (max-width: 375px) {
-  .about-section {
-    padding: 60px var(--section-padding-x);
-  }
   .about-me p {
     font-size: 13px;
     line-height: 1.78;

@@ -14,15 +14,13 @@ const MainContainer = () => {
     <div className="container-main">
       <Navbar />
       <SocialIcons />
-      <div className="container-main">
-        <Landing />
-        <About />
-        <WhatIDo />
-        <Career />
-        <Work />
-        <TechStack />
-        <Contact />
-      </div>
+      <Landing />
+      <About />
+      <WhatIDo />
+      <Career />
+      <Work />
+      <TechStack />
+      <Contact />
     </div>
   );
 };

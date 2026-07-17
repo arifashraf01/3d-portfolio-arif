@@ -4,11 +4,9 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  height: auto;
   width: 100%;
   box-sizing: border-box;
   margin: auto;
-  padding: 110px var(--section-padding-x);
 }
 
 .career-section h2 {
@@ -140,9 +138,6 @@
 
 /* ── ≤900px: vertical card layout ── */
 @media only screen and (max-width: 900px) {
-  .career-section {
-    padding: 90px var(--section-padding-x);
-  }
   .career-section h2 {
     margin-bottom: 52px;
   }
@@ -164,9 +159,6 @@
 
 /* ── ≤600px ── */
 @media only screen and (max-width: 600px) {
-  .career-section {
-    padding: 72px var(--section-padding-x);
-  }
   .career-section h2 {
     margin-bottom: 40px;
     font-size: clamp(24px, 7vw, 32px);
@@ -199,9 +191,6 @@
 
 /* ── Mobile ── */
 @media only screen and (max-width: 480px) {
-  .career-section {
-    padding: 60px var(--section-padding-x);
-  }
   .career-section h2 {
     font-size: clamp(24px, 7vw, 32px);
     margin-bottom: 32px;
@@ -219,11 +208,5 @@
   .career-info-box p {
     font-size: 13px;
     line-height: 1.72;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .career-section {
-    padding: 52px var(--section-padding-x);
   }
 }

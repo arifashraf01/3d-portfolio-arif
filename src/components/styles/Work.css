@@ -3,7 +3,6 @@
   position: relative;
   z-index: 1;
   background-color: var(--bg-secondary);
-  padding: 110px 0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -196,7 +195,6 @@
   .work-image-container {
     width: 370px;
     max-width: 370px;
-    aspect-ratio: 16/9;
   }
 }
 
@@ -223,9 +221,6 @@
 
 /* ── Responsive ── */
 @media only screen and (max-width: 768px) {
-  .work-section {
-    padding: 80px 0;
-  }
   .work-section h2 {
     margin-bottom: 40px;
   }
@@ -250,9 +245,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .work-section {
-    padding: 64px 0;
-  }
   .work-section h2 {
     font-size: clamp(24px, 7vw, 32px);
     margin-bottom: 28px;
@@ -297,8 +289,5 @@
 @media only screen and (max-width: 375px) {
   .work-item {
     padding: 16px 14px;
-  }
-  .work-section {
-    padding: 52px 0;
   }
 }

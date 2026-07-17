@@ -1,5 +1,4 @@
 .contact-section {
-  padding: 110px 0 80px;
   position: relative;
   z-index: 2;
   background-color: var(--bg-secondary);
@@ -127,7 +126,7 @@ a.contact-item:hover .contact-value {
   color: var(--accent);
 }
 
-/* ── Mobile Resume Button ── */
+/* ── Mobile Resume Button (hidden on desktop, shown on tablet+mobile) ── */
 .contact-resume-btn {
   display: none;
   align-items: center;
@@ -189,9 +188,6 @@ a.contact-item:hover .contact-value {
 
 /* ── Tablet ── */
 @media only screen and (max-width: 768px) {
-  .contact-section {
-    padding: 80px 0 60px;
-  }
   .contact-container {
     gap: 40px;
   }
@@ -211,9 +207,6 @@ a.contact-item:hover .contact-value {
 
 /* ── Mobile ── */
 @media only screen and (max-width: 480px) {
-  .contact-section {
-    padding: 64px 0 48px;
-  }
   .contact-container {
     gap: 32px;
   }
@@ -254,9 +247,6 @@ a.contact-item:hover .contact-value {
 }
 
 @media only screen and (max-width: 375px) {
-  .contact-section {
-    padding: 52px 0 40px;
-  }
   .contact-card {
     padding: 18px 14px;
   }

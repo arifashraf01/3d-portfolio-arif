@@ -169,7 +169,7 @@
   }
   .career-section h2 {
     margin-bottom: 40px;
-    font-size: clamp(24px, 7vw, 34px);
+    font-size: clamp(24px, 7vw, 32px);
   }
   .career-info-box {
     padding-left: 16px;
@@ -203,7 +203,7 @@
     padding: 60px var(--section-padding-x);
   }
   .career-section h2 {
-    font-size: clamp(22px, 7vw, 30px);
+    font-size: clamp(24px, 7vw, 32px);
     margin-bottom: 32px;
   }
   .career-info-box {

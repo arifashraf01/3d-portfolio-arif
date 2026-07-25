@@ -7,12 +7,12 @@ const baseUrl = import.meta.env.BASE_URL;
 const projects = [
   {
     title: "DPI Engine",
-    category: "Deep Packet Inspection · Systems Programming",
-    tools: ["C++", "Networking", "PCAP", "Multithreading", "TLS"],
+    category: "Systems Programming · Deep Packet Inspection",
+    tools: ["C++", "PCAP", "Multithreading", "TLS", "Networking"],
     image: `${baseUrl}images/dpi-engine.svg`,
     link: "https://github.com/arifashraf01/Packet_analyzer",
     description:
-      "A high-performance C++ packet analyzer that processes raw PCAP files and captures live traffic, extracting transport and application-layer details including TLS session metadata.",
+      "A high-performance C++ packet analyzer that parses raw PCAP captures and inspects live traffic. Implements custom parsers for Ethernet, IPv4, TCP/UDP, extracts TLS SNI for domain identification, and uses a multithreaded pipeline for real-time throughput.",
     icon: <MdOutlineCode />,
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     image: `${baseUrl}images/chatapp.png`,
     link: "https://github.com/arifashraf01/ephemeral-chat-system",
     description:
-      "An ephemeral messaging platform with WebSocket-powered bi-directional communication, built on Spring Boot with session-scoped message storage and clean REST endpoints.",
+      "Ephemeral messaging platform powered by WebSocket for sub-second bidirectional communication. Built with Spring Boot, exposes 10+ REST APIs for rooms and auth, and handled 50+ concurrent users during load testing.",
     icon: <MdChatBubbleOutline />,
   },
   {
@@ -32,17 +32,17 @@ const projects = [
     image: `${baseUrl}images/ai-assist.png`,
     link: "https://github.com/arifashraf01/Django-AI-Assistant",
     description:
-      "An intelligent backend service that wires Django to large language model APIs, handling context management, prompt engineering, and natural language response delivery.",
+      "Intelligent Django backend that wires large language model APIs into a structured service layer, handling context management, prompt engineering, and delivering natural language responses over clean REST endpoints.",
     icon: <MdOutlineSmartToy />,
   },
   {
     title: "Matrix Chat Frontend",
-    category: "Frontend · UI/UX",
+    category: "Frontend · React · TypeScript",
     tools: ["React", "TypeScript", "Tailwind CSS"],
     image: `${baseUrl}images/matrix-chat.png`,
     link: "https://github.com/arifashraf01/Matrix_chat_frontend",
     description:
-      "A polished React + TypeScript frontend for a real-time chat platform, with a focus on smooth interactions, clean component architecture, and a responsive layout.",
+      "Polished React + TypeScript frontend for a real-time chat platform. Focuses on smooth interactions, clean component architecture, and a fully responsive layout — designed to pair with the Spring Boot WebSocket backend.",
     icon: <MdChatBubbleOutline />,
   },
 ];
@@ -57,10 +57,10 @@ const Work = () => {
 
         <div className="work-grid">
           {projects.map((project, index) => (
-            <div className="work-item" key={index}>
+            <article className="work-item" key={index}>
               <div className="work-info">
                 <div className="work-details">
-                  <h4>{project.title}</h4>
+                  <h3>{project.title}</h3>
                   <p className="work-category">{project.category}</p>
                   <p className="work-description">{project.description}</p>
                   <div className="work-tools">
@@ -80,7 +80,7 @@ const Work = () => {
                     className="work-github-btn"
                     aria-label={`View ${project.title} on GitHub`}
                   >
-                    <FaGithub /> View on GitHub
+                    <FaGithub aria-hidden="true" /> View on GitHub
                   </a>
                 </div>
               </div>
@@ -88,14 +88,16 @@ const Work = () => {
                 {project.image ? (
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} screenshot`}
                     loading="lazy"
                   />
                 ) : (
-                  <div className="work-placeholder">{project.icon}</div>
+                  <div className="work-placeholder" aria-hidden="true">
+                    {project.icon}
+                  </div>
                 )}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

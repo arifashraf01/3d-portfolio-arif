@@ -6,28 +6,28 @@ const About = () => {
       <div className="about-me">
         <h3>About Me</h3>
         <p>
-          I'm a <strong>Full Stack Developer</strong> with a focus on backend
-          engineering — building systems that are fast, reliable, and designed
-          to scale. My core stack is <strong>Java</strong>,{" "}
+          I'm a <strong>Full Stack Developer</strong> with a backend-first
+          mindset — I design and ship systems that are fast, reliable, and built
+          to scale. My primary stack is <strong>Java</strong>,{" "}
           <strong>Spring Boot</strong>, and <strong>Django</strong>, with
-          production experience shipping REST APIs, OTP authentication, and
-          PostgreSQL-backed services at an internship where I reduced API
-          latency by 25%.
+          real-world experience delivering REST APIs, OTP authentication, and{" "}
+          <strong>PostgreSQL</strong>-backed services — reducing API latency by
+          25% during my internship at Netpy Technologies.
         </p>
         <p>
-          On the frontend, I work with <strong>React</strong> and{" "}
-          <strong>TypeScript</strong>, and I care about clean component
-          architecture and smooth user experiences. I'm comfortable across the
-          full delivery pipeline — from database design and{" "}
-          <strong>Docker</strong>-based deployments to <strong>Git</strong>{" "}
-          workflows and production releases.
+          On the frontend I work with <strong>React</strong> and{" "}
+          <strong>TypeScript</strong>, focusing on clean component architecture
+          and smooth user experiences. Across the full delivery pipeline I'm
+          comfortable with database design, <strong>Docker</strong>-based
+          deployments, <strong>Git</strong> workflows, REST API design patterns,
+          and production releases — end to end.
         </p>
         <p>
-          I also enjoy solving algorithmic problems — I've worked through 200+
-          Data Structures &amp; Algorithms problems in Java and C++, which
-          sharpens how I think about performance and tradeoffs in real systems.
-          Currently pursuing B.E. in Computer Science at SEACET, Bengaluru
-          (CGPA 8.6), and <span className="about-status">open to opportunities</span>.
+          I also enjoy solving algorithmic problems — 200+ Data Structures &amp;
+          Algorithms problems in Java and C++ — which sharpens how I approach
+          performance and trade-offs in real systems. Currently in my final year
+          of B.E. Computer Science at SEACET, Bengaluru (CGPA&nbsp;8.6), and{" "}
+          <span className="about-status">open to opportunities</span>.
         </p>
       </div>
     </div>

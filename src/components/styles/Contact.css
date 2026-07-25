@@ -14,11 +14,11 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: 48px;
 }
 
 .contact-container h2 {
-  font-size: clamp(28px, 5.5vw, 64px);
+  font-size: clamp(26px, 5vw, 60px);
   font-weight: 500;
   margin: 0;
   text-align: center;
@@ -33,17 +33,17 @@
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  gap: 20px;
 }
 
 .contact-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 20px;
-  padding: 36px 32px;
+  border-radius: 18px;
+  padding: 32px 28px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
   backdrop-filter: blur(8px);
   transition: transform 0.3s ease, border-color 0.3s ease,
     background 0.3s ease, box-shadow 0.3s ease;
@@ -51,7 +51,7 @@
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   border-color: var(--border-accent);
   background: var(--accent-glow);
   box-shadow: 0 12px 36px rgba(94, 234, 212, 0.07);
@@ -59,7 +59,7 @@
 
 .contact-card h4 {
   font-weight: 600;
-  font-size: clamp(11px, 1.4vw, 14px);
+  font-size: clamp(10px, 1.3vw, 12px);
   margin: 0;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -77,10 +77,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--border-subtle);
   transition: all 0.25s ease;
-  gap: 16px;
+  gap: 12px;
   cursor: pointer;
 }
 
@@ -102,7 +102,7 @@ a.contact-item:hover .contact-value {
 }
 
 .contact-label {
-  font-size: clamp(12px, 1.4vw, 14px);
+  font-size: clamp(11px, 1.3vw, 13px);
   color: var(--text-muted);
   font-weight: 400;
   flex-shrink: 0;
@@ -110,11 +110,11 @@ a.contact-item:hover .contact-value {
 }
 
 .contact-value {
-  font-size: clamp(12px, 1.4vw, 14px);
+  font-size: clamp(11px, 1.3vw, 13px);
   font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   color: var(--text-primary);
   transition: color 0.25s ease;
   word-break: break-word;
@@ -126,26 +126,27 @@ a.contact-item:hover .contact-value {
   color: var(--accent);
 }
 
-/* ── Mobile Resume Button (hidden on desktop, shown on tablet+mobile) ── */
+/* ── Resume Button (shown on tablet & mobile) ── */
 .contact-resume-btn {
   display: none;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 28px;
+  padding: 13px 28px;
   border-radius: 50px;
   border: 1.5px solid rgba(255, 255, 255, 0.2);
   background: transparent;
   color: var(--text-primary);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-align: center;
   transition: all 0.3s ease;
+  min-height: 48px;
 }
 
 .contact-resume-btn svg {
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .contact-resume-btn:hover {
@@ -160,13 +161,13 @@ a.contact-item:hover .contact-value {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   padding-top: 12px;
   border-top: 1px solid var(--border-subtle);
 }
 
 .contact-footer h3 {
-  font-size: clamp(13px, 2vw, 16px);
+  font-size: clamp(12px, 1.8vw, 15px);
   font-weight: 400;
   margin: 0;
   color: var(--text-muted);
@@ -177,28 +178,28 @@ a.contact-item:hover .contact-value {
 }
 
 .contact-footer p {
-  font-size: clamp(11px, 1.2vw, 13px);
+  font-size: clamp(10px, 1.1vw, 12px);
   color: var(--text-dim);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   margin: 0;
 }
 
 /* ── Tablet ── */
 @media only screen and (max-width: 768px) {
   .contact-container {
-    gap: 40px;
+    gap: 36px;
   }
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 14px;
   }
   .contact-card {
-    padding: 28px 24px;
-    border-radius: 16px;
-    gap: 18px;
+    padding: 26px 22px;
+    border-radius: 14px;
+    gap: 16px;
   }
   .contact-resume-btn {
     display: flex;
@@ -208,46 +209,46 @@ a.contact-item:hover .contact-value {
 /* ── Mobile ── */
 @media only screen and (max-width: 480px) {
   .contact-container {
-    gap: 32px;
+    gap: 28px;
   }
   .contact-container h2 {
-    font-size: clamp(24px, 7vw, 32px);
+    font-size: clamp(22px, 7vw, 30px);
   }
   .contact-card {
-    padding: 22px 18px;
-    border-radius: 14px;
-    gap: 16px;
+    padding: 20px 16px;
+    border-radius: 12px;
+    gap: 14px;
   }
   .contact-card h4 {
-    font-size: 11px;
+    font-size: 10px;
   }
   .contact-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 3px;
-    padding: 12px 0;
+    padding: 11px 0;
   }
   .contact-label {
-    font-size: 11px;
+    font-size: 10.5px;
   }
   .contact-value {
-    font-size: 13px;
+    font-size: 12.5px;
     text-align: left;
   }
   .contact-footer h3 {
-    font-size: 13px;
+    font-size: 12px;
   }
   .contact-footer p {
-    font-size: 11px;
+    font-size: 10.5px;
   }
   .contact-resume-btn {
     width: 100%;
-    font-size: 13px;
+    font-size: 12.5px;
   }
 }
 
 @media only screen and (max-width: 375px) {
   .contact-card {
-    padding: 18px 14px;
+    padding: 16px 12px;
   }
 }

@@ -1,3 +1,4 @@
+/* ── Social Icons (fixed bottom-left, desktop only) ── */
 .icons-section {
   position: fixed;
   max-width: var(--cMaxWidth);
@@ -14,38 +15,33 @@
   bottom: 20px;
   display: none;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
   z-index: 999;
   padding: 8px;
   pointer-events: all;
 }
 
 .social-icons a {
-  --siLeft: 50%;
-  --siTop: 50%;
-  position: absolute;
-  left: var(--siLeft, 50%);
-  top: var(--siTop, 50%);
-  transform: translate(-50%, -50%);
   display: flex;
   font-size: 22px;
   color: var(--text-muted);
-  will-change: left, top;
-  transition: transform 0.3s ease-out, color 0.25s ease;
+  transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .social-icons a:hover {
   color: var(--accent);
+  transform: translateX(3px);
 }
 
 .social-icons span {
-  width: 48px;
-  height: 48px;
-  position: relative;
+  width: 40px;
+  height: 40px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ── Resume Button ── */
+/* ── Resume Button (desktop, rotated on right side) ── */
 .resume-button {
   position: absolute;
   z-index: 99;
@@ -94,20 +90,19 @@ div.resume-button span {
 @media only screen and (min-width: 900px) {
   .social-icons {
     display: flex;
-    gap: 18px;
   }
   .social-icons a {
-    font-size: 26px;
+    font-size: 24px;
   }
   .resume-button {
     transform: none;
-    font-size: 18px;
-    line-height: 18px;
+    font-size: 17px;
+    line-height: 17px;
     right: 20px;
     letter-spacing: 4px;
   }
   div.resume-button span {
-    font-size: 20px;
+    font-size: 19px;
     margin-top: -1.5px;
   }
 }

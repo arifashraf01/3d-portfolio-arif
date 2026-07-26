@@ -36,7 +36,7 @@ const projects = [
     link: null,
     liveLink: "https://gillorganics.com",
     description:
-      "Client e-commerce backend built with Django — engineered 12+ REST APIs for product catalog, authentication, and order workflows, enabling full end-to-end automation and reducing manual processing overhead in production.",
+      "A client e-commerce backend built with Django — engineered 12+ REST APIs for product catalog, authentication, and order workflows, enabling full end-to-end automation and reducing manual processing overhead in production.",
     icon: <MdStorefront />,
   },
   {

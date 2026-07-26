@@ -39,7 +39,7 @@ const Contact = () => {
             <div className="contact-card-icon contact-card-icon--social">
               <FaLinkedinIn />
             </div>
-            <h4>Social & Profiles</h4>
+            <h4>Socials &amp; Profiles</h4>
             <div className="contact-links">
               <a href="https://www.linkedin.com/in/arif-ashraf-3abb89179" target="_blank" rel="noreferrer" className="contact-item">
                 <span className="contact-label">LinkedIn</span>

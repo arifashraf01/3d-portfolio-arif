@@ -22,18 +22,18 @@ const About = () => {
           reducing API latency by 25% during my internship at Netpy Technologies.
         </p>
         <p>
-          On the frontend I work with <strong>React</strong> and{" "}
+          On the frontend, I work with <strong>React</strong> and{" "}
           <strong>TypeScript</strong>, focusing on clean component architecture
-          and smooth user experiences. Across the full delivery pipeline I'm
+          and smooth user experiences. Across the full delivery pipeline, I'm
           comfortable with database design, <strong>Docker</strong>-based
           deployments, <strong>Git</strong> workflows, REST API design patterns,
           and production releases — end to end.
         </p>
         <p>
-          I enjoy solving algorithmic problems — 200+ Data Structures &amp;
-          Algorithms problems in Java and C++ — which sharpens how I approach
-          performance and trade-offs in real systems. I hold a B.E. in Computer
-          Science from SEACET, Bengaluru (CGPA&nbsp;8.6), and I'm{" "}
+          I've solved 200+ Data Structures &amp; Algorithms problems in Java
+          and C++, which sharpens how I approach performance and trade-offs in
+          real systems. I hold a B.E. in Computer Science from SEACET,
+          Bengaluru (CGPA&nbsp;8.6), and I'm{" "}
           <span className="about-status">open to opportunities</span>.
         </p>
 

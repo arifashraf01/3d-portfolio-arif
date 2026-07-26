@@ -7,7 +7,7 @@ const Career = () => {
         <h2>
           My career <span>&</span>
           <br />
-          experience
+          Experience
         </h2>
         <div className="career-info">
           <div className="career-timeline">

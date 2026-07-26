@@ -19,7 +19,7 @@ const WhatIDo = () => {
               focusing on clean architecture, secure authentication, and
               production-ready API design.
             </p>
-            <h5>Skillset & tools</h5>
+            <h5>Skillset &amp; Tools</h5>
             <div className="what-content-flex">
               <div className="what-tags">Java</div>
               <div className="what-tags">Python</div>
@@ -39,7 +39,7 @@ const WhatIDo = () => {
               I enjoy system-level development, from packet analysis pipelines
               to real-time chat architecture using WebSocket communication.
             </p>
-            <h5>Skillset & tools</h5>
+            <h5>Skillset &amp; Tools</h5>
             <div className="what-content-flex">
               <div className="what-tags">C++</div>
               <div className="what-tags">PCAP Parsing</div>

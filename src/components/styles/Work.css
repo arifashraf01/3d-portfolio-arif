@@ -11,7 +11,7 @@
   font-size: clamp(26px, 5vw, 60px);
   font-weight: 500;
   margin-top: 0;
-  margin-bottom: 52px;
+  margin-bottom: 56px;
   text-align: center;
 }
 
@@ -40,18 +40,21 @@
   width: 100%;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 20px;
-  padding: 30px 26px;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
   align-items: center;
   box-sizing: border-box;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 0.3s ease, box-shadow 0.4s ease;
+  transition: transform var(--transition-slow),
+    border-color var(--transition-base),
+    box-shadow var(--transition-slow),
+    background var(--transition-base);
 }
 
 .work-item:hover {
   transform: translateY(-5px);
   border-color: var(--border-accent);
-  box-shadow: 0 16px 44px rgba(94, 234, 212, 0.07);
+  box-shadow: var(--shadow-card-hover), 0 0 0 1px rgba(45, 212, 191, 0.05);
+  background: rgba(255, 255, 255, 0.035);
 }
 
 @media only screen and (min-width: 1024px) {
@@ -59,7 +62,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 44px 52px;
-    gap: 48px;
+    gap: 52px;
   }
 }
 
@@ -75,12 +78,11 @@
 .work-details {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
-/* h3 used for project title (semantic improvement) */
 .work-details h3 {
-  font-size: clamp(16px, 2.6vw, 26px);
+  font-size: clamp(17px, 2.6vw, 26px);
   font-weight: 600;
   margin: 0;
   color: var(--text-primary);
@@ -98,7 +100,7 @@
 
 .work-description {
   font-size: clamp(13px, 1.5vw, 14.5px);
-  line-height: 1.82;
+  line-height: 1.84;
   font-weight: 300;
   color: var(--text-secondary);
   margin: 0;
@@ -127,52 +129,76 @@
 }
 
 .tool-tag {
-  background: rgba(94, 234, 212, 0.06);
+  background: rgba(45, 212, 191, 0.06);
   color: var(--accent);
-  padding: 5px 12px;
-  border-radius: 8px;
+  padding: 5px 13px;
+  border-radius: var(--radius-sm);
   font-size: 11.5px;
   font-weight: 500;
-  border: 1px solid rgba(94, 234, 212, 0.16);
-  transition: background 0.2s ease, border-color 0.2s ease;
+  border: 1px solid rgba(45, 212, 191, 0.15);
+  transition: background var(--transition-fast), border-color var(--transition-fast);
   white-space: nowrap;
 }
 
 .work-item:hover .tool-tag {
-  background: rgba(94, 234, 212, 0.11);
-  border-color: rgba(94, 234, 212, 0.28);
+  background: rgba(45, 212, 191, 0.11);
+  border-color: rgba(45, 212, 191, 0.28);
 }
 
-/* ── GitHub Button ── */
-.work-github-btn {
+/* ── Action Buttons ── */
+.work-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.work-github-btn,
+.work-live-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 11px 20px;
-  border-radius: 10px;
-  color: var(--text-primary);
+  gap: 7px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
   font-weight: 500;
   font-size: 13px;
-  width: fit-content;
   box-sizing: border-box;
-  transition: all 0.25s ease;
-  margin-top: 8px;
-  min-height: 46px;
+  transition: all var(--transition-base);
+  min-height: 44px;
   letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.work-github-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
 }
 
 .work-github-btn:hover {
   background: var(--accent);
-  color: #050810;
+  color: #030711;
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(20, 184, 166, 0.28);
+  box-shadow: 0 6px 20px rgba(45, 212, 191, 0.28);
 }
 
-.work-github-btn svg {
-  font-size: 16px;
+.work-live-btn {
+  background: transparent;
+  border: 1px solid var(--border-accent);
+  color: var(--accent);
+}
+
+.work-live-btn:hover {
+  background: rgba(45, 212, 191, 0.10);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(45, 212, 191, 0.18);
+}
+
+.work-github-btn svg,
+.work-live-btn svg {
+  font-size: 15px;
   flex-shrink: 0;
 }
 
@@ -181,14 +207,14 @@
   width: 100%;
   max-width: 100%;
   aspect-ratio: 16/9;
-  border-radius: 14px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-card);
   border: 1px solid var(--border-subtle);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0d1b2e;
+  background: #0a1122;
   flex-shrink: 0;
 }
 
@@ -212,48 +238,49 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #122545 0%, #0a0e17 100%);
+  background: linear-gradient(135deg, #0d1e38 0%, #080d17 100%);
 }
 
 .work-placeholder svg {
   font-size: 52px;
-  color: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.06);
 }
 
 /* ── Responsive ── */
 @media only screen and (max-width: 768px) {
   .work-section h2 {
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
   .work-item {
-    padding: 22px 18px;
-    border-radius: 16px;
-    gap: 18px;
+    padding: 24px 20px;
+    border-radius: var(--radius-md);
+    gap: 20px;
   }
   .work-grid {
     gap: 20px;
   }
-  .work-github-btn {
-    width: 100%;
+  .work-github-btn,
+  .work-live-btn {
+    flex: 1;
     justify-content: center;
   }
   .work-details h3 {
     font-size: 17px;
   }
   .work-description {
-    font-size: 13px;
+    font-size: 13.5px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .work-section h2 {
     font-size: clamp(22px, 7vw, 30px);
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
   .work-item {
-    padding: 18px 14px;
+    padding: 18px 16px;
     gap: 16px;
-    border-radius: 14px;
+    border-radius: var(--radius-sm);
   }
   .work-grid {
     gap: 16px;
@@ -265,11 +292,11 @@
     font-size: 15px;
   }
   .work-details {
-    gap: 6px;
+    gap: 7px;
   }
   .work-description {
     font-size: 13px;
-    line-height: 1.75;
+    line-height: 1.78;
   }
   .work-category {
     font-size: 10px;
@@ -278,13 +305,13 @@
     font-size: 11px;
     padding: 4px 10px;
   }
-  .work-github-btn {
-    font-size: 12px;
-    padding: 12px 14px;
-    margin-top: 4px;
-    width: 100%;
+  .work-github-btn,
+  .work-live-btn {
+    font-size: 12.5px;
+    padding: 11px 14px;
+    min-height: 46px;
+    flex: 1;
     justify-content: center;
-    min-height: 48px;
   }
 }
 

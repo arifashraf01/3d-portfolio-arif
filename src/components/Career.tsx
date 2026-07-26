@@ -6,13 +6,14 @@ const Career = () => {
       <div className="career-container">
         <h2>
           My career <span>&</span>
-          <br /> experience
+          <br />
+          experience
         </h2>
         <div className="career-info">
           <div className="career-timeline">
             <div className="career-dot"></div>
           </div>
-          
+
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
@@ -22,9 +23,10 @@ const Career = () => {
               <h3>OCT 2025–PRESENT</h3>
             </div>
             <p>
-              Built backend services with Django for a cloud-based e-commerce
-              platform, designed REST APIs for auth, product and order flows,
-              and implemented OTP login with role-based access control.
+              Engineered Django backend services and 15+ REST APIs for a cloud
+              e-commerce platform. Implemented OTP authentication with Django
+              REST Framework and reduced API latency by 25% through optimized
+              PostgreSQL queries.
             </p>
           </div>
 
@@ -52,11 +54,11 @@ const Career = () => {
               <h3>2022–2026</h3>
             </div>
             <p>
-              Pursuing B.E. in Computer Science and Engineering with an 8.5 CGPA,
-              while building production-focused backend and networking projects.
+              Graduated with a B.E. in Computer Science and Engineering with an
+              8.6 CGPA, while building production-focused backend and
+              networking projects.
             </p>
           </div>
-
         </div>
       </div>
     </div>

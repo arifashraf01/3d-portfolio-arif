@@ -10,9 +10,9 @@ const About = () => {
           mindset — I design and ship systems that are fast, reliable, and built
           to scale. My primary stack is <strong>Java</strong>,{" "}
           <strong>Spring Boot</strong>, and <strong>Django</strong>, with
-          real-world experience delivering REST APIs, OTP authentication, and{" "}
-          <strong>PostgreSQL</strong>-backed services — reducing API latency by
-          25% during my internship at Netpy Technologies.
+          real-world experience delivering <strong>REST APIs</strong>, OTP
+          authentication, and <strong>PostgreSQL</strong>-backed services —
+          reducing API latency by 25% during my internship at Netpy Technologies.
         </p>
         <p>
           On the frontend I work with <strong>React</strong> and{" "}
@@ -25,8 +25,8 @@ const About = () => {
         <p>
           I also enjoy solving algorithmic problems — 200+ Data Structures &amp;
           Algorithms problems in Java and C++ — which sharpens how I approach
-          performance and trade-offs in real systems. Currently in my final year
-          of B.E. Computer Science at SEACET, Bengaluru (CGPA&nbsp;8.6), and{" "}
+          performance and trade-offs in real systems. I hold a B.E. in Computer
+          Science from SEACET, Bengaluru (CGPA&nbsp;8.6), and I'm{" "}
           <span className="about-status">open to opportunities</span>.
         </p>
       </div>

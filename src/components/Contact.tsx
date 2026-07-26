@@ -1,5 +1,5 @@
-import { MdArrowOutward, MdCopyright, MdOpenInNew, MdEmail, MdPhone } from "react-icons/md";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import { MdArrowOutward, MdCopyright, MdOpenInNew, MdEmail } from "react-icons/md";
+import { FaLinkedinIn } from "react-icons/fa6";
 import "./styles/Contact.css";
 
 const Contact = () => {

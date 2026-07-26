@@ -1,19 +1,31 @@
 
 /* ── Design Tokens ── */
 :root {
-  /* Colors */
-  --accent: #5eead4;
+  /* Core Accent — teal spectrum */
+  --accent: #2dd4bf;
   --accent-hover: #14b8a6;
-  --accent-glow: rgba(94, 234, 212, 0.12);
-  --bg-primary: #000000;
-  --bg-secondary: #050505;
-  --bg-card: rgba(255, 255, 255, 0.03);
+  --accent-dim: #0d9488;
+  --accent-glow: rgba(45, 212, 191, 0.10);
+  --accent-glow-strong: rgba(45, 212, 191, 0.18);
+
+  /* Backgrounds */
+  --bg-primary: #020408;
+  --bg-secondary: #050810;
+  --bg-tertiary: #080d18;
+  --bg-card: rgba(255, 255, 255, 0.028);
+  --bg-card-hover: rgba(45, 212, 191, 0.05);
+
+  /* Borders */
   --border-subtle: rgba(255, 255, 255, 0.07);
-  --border-accent: rgba(94, 234, 212, 0.3);
-  --text-primary: #eae5ec;
-  --text-secondary: #d4d4d8;
-  --text-muted: #a1a1aa;
-  --text-dim: #71717a;
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-accent: rgba(45, 212, 191, 0.28);
+  --border-accent-strong: rgba(45, 212, 191, 0.45);
+
+  /* Text */
+  --text-primary: #f0ece4;
+  --text-secondary: #c8c4cc;
+  --text-muted: #8a8694;
+  --text-dim: #5c5966;
 
   /* Legacy aliases */
   --accentColor: var(--accent);
@@ -41,6 +53,23 @@
   --cMaxWidth: 1920px;
   --section-padding-x: clamp(16px, 5vw, 60px);
   --section-padding-y: clamp(64px, 10vw, 120px);
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 8px 32px rgba(45, 212, 191, 0.12);
+  --shadow-accent-strong: 0 12px 40px rgba(45, 212, 191, 0.22);
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Border radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 50px;
 }
 
 /* ── Global Reset ── */

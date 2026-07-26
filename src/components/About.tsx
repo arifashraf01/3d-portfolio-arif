@@ -1,5 +1,12 @@
 import "./styles/About.css";
 
+const stats = [
+  { value: "25%", label: "API Latency Reduced" },
+  { value: "200+", label: "DSA Problems Solved" },
+  { value: "27+", label: "REST APIs Built" },
+  { value: "8.6", label: "CGPA" },
+];
+
 const About = () => {
   return (
     <div className="about-section" id="about">
@@ -23,12 +30,21 @@ const About = () => {
           and production releases — end to end.
         </p>
         <p>
-          I also enjoy solving algorithmic problems — 200+ Data Structures &amp;
+          I enjoy solving algorithmic problems — 200+ Data Structures &amp;
           Algorithms problems in Java and C++ — which sharpens how I approach
           performance and trade-offs in real systems. I hold a B.E. in Computer
           Science from SEACET, Bengaluru (CGPA&nbsp;8.6), and I'm{" "}
           <span className="about-status">open to opportunities</span>.
         </p>
+
+        <div className="about-stats">
+          {stats.map((s) => (
+            <div className="about-stat" key={s.label}>
+              <span className="about-stat-value">{s.value}</span>
+              <span className="about-stat-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

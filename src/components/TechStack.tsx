@@ -1,9 +1,9 @@
 import "./styles/TechStack.css";
-import { 
-  SiReact, SiNextdotjs, SiNodedotjs, SiExpress, 
+import {
+  SiReact, SiNextdotjs, SiNodedotjs, SiExpress,
   SiMongodb, SiMysql, SiTypescript, SiJavascript,
   SiPython, SiDjango, SiSpringboot, SiCplusplus,
-  SiDocker, SiPostgresql
+  SiDocker, SiPostgresql, SiNginx, SiGithubactions,
 } from "react-icons/si";
 import { FaJava, FaGitAlt, FaGithub } from "react-icons/fa6";
 import { TbApi } from "react-icons/tb";
@@ -17,31 +17,38 @@ const techGroups = [
       { name: "C++", icon: <SiCplusplus /> },
       { name: "TypeScript", icon: <SiTypescript /> },
       { name: "JavaScript", icon: <SiJavascript /> },
-    ]
+    ],
   },
   {
-    category: "Backend & Databases",
+    category: "Backend & Frameworks",
     items: [
       { name: "Spring Boot", icon: <SiSpringboot /> },
       { name: "Django", icon: <SiDjango /> },
+      { name: "REST APIs", icon: <TbApi /> },
       { name: "Node.js", icon: <SiNodedotjs /> },
       { name: "Express", icon: <SiExpress /> },
+    ],
+  },
+  {
+    category: "Databases",
+    items: [
       { name: "PostgreSQL", icon: <SiPostgresql /> },
       { name: "MySQL", icon: <SiMysql /> },
       { name: "MongoDB", icon: <SiMongodb /> },
-      { name: "REST APIs", icon: <TbApi /> },
-    ]
+    ],
   },
   {
-    category: "Frontend & Tools",
+    category: "Frontend & DevOps",
     items: [
       { name: "React", icon: <SiReact /> },
       { name: "Next.js", icon: <SiNextdotjs /> },
       { name: "Docker", icon: <SiDocker /> },
       { name: "Git", icon: <FaGitAlt /> },
       { name: "GitHub", icon: <FaGithub /> },
-    ]
-  }
+      { name: "GH Actions", icon: <SiGithubactions /> },
+      { name: "Nginx", icon: <SiNginx /> },
+    ],
+  },
 ];
 
 const TechStack = () => {

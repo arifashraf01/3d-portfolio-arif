@@ -11,22 +11,31 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Close menu on scroll or resize
   useEffect(() => {
-    const close = () => setMenuOpen(false);
-    window.addEventListener("scroll", close, { passive: true });
-    window.addEventListener("resize", close, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", close);
-      window.removeEventListener("resize", close);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+      if (menuOpen) setMenuOpen(false);
     };
-  }, []);
+    const handleResize = () => setMenuOpen(false);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleResize, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [menuOpen]);
 
   const handleNavClick = () => setMenuOpen(false);
 
   return (
-    <header className="header">
+    <header className={`header${scrolled ? " header--scrolled" : ""}`}>
+      {/* Logo / Brand */}
+      <a href="#landingDiv" className="nav-logo" aria-label="Go to top">
+        <span className="nav-logo-mark">AA</span>
+      </a>
+
       {/* Desktop nav */}
       <nav className="header-nav" aria-label="Main navigation">
         <ul>

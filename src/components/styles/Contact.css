@@ -8,25 +8,40 @@
 }
 
 .contact-container {
-  max-width: 960px;
+  max-width: 1000px;
   margin: auto;
   padding: 0 var(--section-padding-x);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 52px;
 }
 
-.contact-container h2 {
-  font-size: clamp(26px, 5vw, 60px);
+/* ── Header ── */
+.contact-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-header h2 {
+  font-size: clamp(28px, 5.5vw, 64px);
   font-weight: 500;
   margin: 0;
-  text-align: center;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
-.contact-container h2 > span {
+.contact-header h2 > span {
   color: var(--accent);
+}
+
+.contact-tagline {
+  font-size: clamp(13px, 1.6vw, 16px);
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.2px;
 }
 
 /* ── Cards Grid ── */
@@ -39,22 +54,49 @@
 .contact-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: 18px;
-  padding: 32px 28px;
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 22px;
   backdrop-filter: blur(8px);
-  transition: transform 0.3s ease, border-color 0.3s ease,
-    background 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    background var(--transition-base),
+    box-shadow var(--transition-base);
   box-sizing: border-box;
 }
 
 .contact-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: var(--border-accent);
-  background: var(--accent-glow);
-  box-shadow: 0 12px 36px rgba(94, 234, 212, 0.07);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-accent);
+}
+
+/* Full-width third card */
+.contact-card--wide {
+  grid-column: 1 / -1;
+}
+
+/* ── Card Icon ── */
+.contact-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.contact-card-icon--social {
+  background: rgba(45, 212, 191, 0.06);
 }
 
 .contact-card h4 {
@@ -63,7 +105,7 @@
   margin: 0;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
 }
 
 /* ── Contact Items ── */
@@ -77,11 +119,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 0;
+  padding: 14px 0;
   border-bottom: 1px solid var(--border-subtle);
-  transition: all 0.25s ease;
+  transition: all var(--transition-fast);
   gap: 12px;
-  cursor: pointer;
+  cursor: default;
 }
 
 .contact-item:first-child {
@@ -93,8 +135,12 @@
   padding-bottom: 0;
 }
 
+a.contact-item {
+  cursor: pointer;
+}
+
 a.contact-item:hover {
-  border-bottom-color: rgba(94, 234, 212, 0.3);
+  border-bottom-color: rgba(45, 212, 191, 0.28);
 }
 
 a.contact-item:hover .contact-value {
@@ -116,7 +162,7 @@ a.contact-item:hover .contact-value {
   align-items: center;
   gap: 4px;
   color: var(--text-primary);
-  transition: color 0.25s ease;
+  transition: color var(--transition-fast);
   word-break: break-word;
   overflow-wrap: anywhere;
   text-align: right;
@@ -126,23 +172,29 @@ a.contact-item:hover .contact-value {
   color: var(--accent);
 }
 
-/* ── Resume Button (shown on tablet & mobile) ── */
+/* ── Contact Actions ── */
+.contact-actions {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Resume Button ── */
 .contact-resume-btn {
-  display: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 13px 28px;
-  border-radius: 50px;
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  padding: 14px 36px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border-medium);
   background: transparent;
   color: var(--text-primary);
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   text-align: center;
-  transition: all 0.3s ease;
-  min-height: 48px;
+  transition: all var(--transition-base);
+  min-height: 50px;
 }
 
 .contact-resume-btn svg {
@@ -152,8 +204,9 @@ a.contact-item:hover .contact-value {
 .contact-resume-btn:hover {
   border-color: var(--accent);
   color: var(--accent);
-  background: rgba(94, 234, 212, 0.05);
+  background: rgba(45, 212, 191, 0.06);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-accent);
 }
 
 /* ── Footer ── */
@@ -162,7 +215,7 @@ a.contact-item:hover .contact-value {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding-top: 12px;
+  padding-top: 16px;
   border-top: 1px solid var(--border-subtle);
 }
 
@@ -190,49 +243,59 @@ a.contact-item:hover .contact-value {
 /* ── Tablet ── */
 @media only screen and (max-width: 768px) {
   .contact-container {
-    gap: 36px;
+    gap: 40px;
   }
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  .contact-card {
-    padding: 26px 22px;
-    border-radius: 14px;
     gap: 16px;
   }
-  .contact-resume-btn {
-    display: flex;
+  .contact-card--wide {
+    grid-column: auto;
+  }
+  .contact-card {
+    padding: 28px 24px;
+    border-radius: var(--radius-md);
+    gap: 18px;
   }
 }
 
 /* ── Mobile ── */
 @media only screen and (max-width: 480px) {
   .contact-container {
-    gap: 28px;
+    gap: 30px;
   }
-  .contact-container h2 {
-    font-size: clamp(22px, 7vw, 30px);
+  .contact-header h2 {
+    font-size: clamp(24px, 7.5vw, 34px);
+  }
+  .contact-tagline {
+    font-size: 13px;
   }
   .contact-card {
-    padding: 20px 16px;
-    border-radius: 12px;
-    gap: 14px;
+    padding: 22px 18px;
+    border-radius: var(--radius-sm);
+    gap: 16px;
   }
   .contact-card h4 {
     font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+  .contact-card-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 10px;
   }
   .contact-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 3px;
-    padding: 11px 0;
+    padding: 12px 0;
   }
   .contact-label {
-    font-size: 10.5px;
+    font-size: 11px;
   }
   .contact-value {
-    font-size: 12.5px;
+    font-size: 13px;
     text-align: left;
   }
   .contact-footer h3 {
@@ -244,11 +307,12 @@ a.contact-item:hover .contact-value {
   .contact-resume-btn {
     width: 100%;
     font-size: 12.5px;
+    padding: 14px 20px;
   }
 }
 
 @media only screen and (max-width: 375px) {
   .contact-card {
-    padding: 16px 12px;
+    padding: 18px 14px;
   }
 }

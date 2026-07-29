@@ -141,14 +141,20 @@ body {
 /* ── Viewport-aware widths ── */
 @media screen and (max-width: 480px) {
   :root {
-    --section-padding-x: 14px;
-    --section-padding-y: 52px;
+    --section-padding-x: 16px;
+    --section-padding-y: 48px;
+  }
+  html {
+    font-size: 15px; /* Slightly reduce base font size to fit more words per line */
   }
 }
 
 @media screen and (max-width: 375px) {
   :root {
     --section-padding-x: 12px;
-    --section-padding-y: 44px;
+    --section-padding-y: 40px;
+  }
+  html {
+    font-size: 14px;
   }
 }

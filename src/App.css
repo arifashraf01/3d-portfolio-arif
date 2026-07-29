@@ -77,12 +77,12 @@
   .career-section,
   .work-section,
   .techstack-section {
-    padding-top: 88px;
-    padding-bottom: 88px;
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
   .contact-section {
-    padding-top: 88px;
-    padding-bottom: 72px;
+    padding-top: 72px;
+    padding-bottom: 60px;
   }
 }
 
@@ -93,12 +93,12 @@
   .career-section,
   .work-section,
   .techstack-section {
-    padding-top: 68px;
-    padding-bottom: 68px;
+    padding-top: 56px;
+    padding-bottom: 56px;
   }
   .contact-section {
-    padding-top: 68px;
-    padding-bottom: 52px;
+    padding-top: 56px;
+    padding-bottom: 44px;
   }
 }
 
@@ -108,11 +108,11 @@
   .career-section,
   .work-section,
   .techstack-section {
-    padding-top: 52px;
-    padding-bottom: 52px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
   .contact-section {
-    padding-top: 52px;
-    padding-bottom: 40px;
+    padding-top: 48px;
+    padding-bottom: 36px;
   }
 }

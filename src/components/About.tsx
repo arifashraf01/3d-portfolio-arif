@@ -32,7 +32,7 @@ const About = () => {
         <p>
           I've solved 200+ Data Structures &amp; Algorithms problems in Java
           and C++, which sharpens how I approach performance and trade-offs in
-          real systems. I hold a B.E. in Computer Science from SEACET,
+          real systems. I graduated with a B.E. in Computer Science from SEACET,
           Bengaluru (CGPA&nbsp;8.6), and I'm{" "}
           <span className="about-status">open to opportunities</span>.
         </p>

@@ -196,18 +196,19 @@
     min-height: 100svh;
   }
   .landing-content {
-    gap: 16px;
+    gap: 14px;
   }
   .landing-name {
-    font-size: clamp(32px, 11vw, 58px);
-    letter-spacing: 2px;
+    font-size: clamp(28px, 9vw, 42px);
+    letter-spacing: 1.5px;
   }
   .landing-role {
-    font-size: clamp(13px, 3.8vw, 17px);
+    font-size: clamp(12px, 3.5vw, 15px);
   }
   .landing-bio {
-    font-size: 13.5px;
-    line-height: 1.80;
+    font-size: 13px;
+    line-height: 1.6;
+    padding: 0 10px;
   }
   .landing-actions {
     flex-direction: column;
@@ -219,11 +220,11 @@
   .btn-primary,
   .btn-secondary {
     width: 100%;
-    padding: 15px 16px;
+    padding: 14px 16px;
     min-width: unset;
-    font-size: 12.5px;
+    font-size: 12px;
     letter-spacing: 0.8px;
-    min-height: 52px;
+    min-height: 48px;
   }
 }
 
@@ -233,9 +234,9 @@
     padding: 76px 12px 44px;
   }
   .landing-name {
-    font-size: clamp(28px, 10vw, 44px);
+    font-size: clamp(24px, 8vw, 36px);
   }
   .landing-bio {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
